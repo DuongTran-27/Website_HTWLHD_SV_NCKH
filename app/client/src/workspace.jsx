@@ -1043,7 +1043,7 @@ function Documents({ topic }) {
             <Upload size={25} />
             <h3>Thêm tài liệu nghiên cứu</h3>
             <p>
-              PDF, DOCX, XLSX, PPTX · tối đa 20 MB/tệp. Ảnh riêng tối đa 5 MB.
+              PDF, DOCX, XLSX, PPTX · tối đa 10 MB/tệp. Ảnh riêng tối đa 5 MB.
             </p>
             <div className="row-actions">
               <select
@@ -1078,7 +1078,7 @@ function Documents({ topic }) {
                     setError(null);
                     if (
                       file.size >
-                      (purpose === "private_image" ? 5000000 : 20000000)
+                      (purpose === "private_image" ? 5000000 : 10000000)
                     ) {
                       setError(new Error("Tệp vượt giới hạn dung lượng."));
                       return;

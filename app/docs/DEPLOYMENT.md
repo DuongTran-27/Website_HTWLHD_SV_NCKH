@@ -51,15 +51,15 @@ Import repository với root directory là thư mục chứa `package.json` gố
 
 Thay duy nhất `https://REPLACE-WITH-YOUR-API.onrender.com` trong rewrite bằng backend của bạn. `/api/:path*` đi qua external rewrite đến Express, tiếp theo là fallback React Router. [Tài liệu rewrite chính thức](https://vercel.com/docs/routing/rewrites).
 
-Frontend luôn gọi `/api/v1` cùng origin, không lưu JWT/refresh trong localStorage. Refresh cookie không có Domain cố định; reverse proxy phải giữ Set-Cookie/Origin. Không chuyển upload 20 MB qua một Vercel Function wrapper mà chưa kiểm tra giới hạn của function. Luồng đã chọn là external proxy đến Express. Khả năng proxy gói thực xử lý file 20 MB và timeout cần kiểm chứng trên URL thật.
+Frontend luôn gọi `/api/v1` cùng origin, không lưu JWT/refresh trong localStorage. Refresh cookie không có Domain cố định; reverse proxy phải giữ Set-Cookie/Origin. Không chuyển upload 10 MB qua một Vercel Function wrapper mà chưa kiểm tra giới hạn của function. Luồng đã chọn là external proxy đến Express. Khả năng proxy gói thực xử lý file 10 MB và timeout cần kiểm chứng trên URL thật.
 
 ## Cloudinary và kiểm tra trước mở demo
 
 1. Cấu hình credential backend và chạy `npm run verify:cloudinary -- --expiry`.
-2. Xác nhận PDF 20 MB raw/authenticated upload/download đúng checksum, PDF được phép phân phối, link thực sự bị từ chối sau 5 phút, ảnh công khai tải được.
+2. Xác nhận PDF 10 MB (giới hạn hiện hành, phù hợp gói Cloudinary Free) raw/authenticated upload/download đúng checksum, PDF được phép phân phối, link thực sự bị từ chối sau 5 phút, ảnh công khai tải được.
 3. Chạy `npm run seed:cloud` ở môi trường demo riêng nếu cần các ví dụ nộp muộn/nộp lại/kết quả có file thật.
 4. Kiểm tra trực tiếp API/file với sinh viên ngoài nhóm, giảng viên cũ, cán bộ khác khoa và admin kỹ thuật.
-5. Chạy lại E2E trên URL staging thật; xác nhận cookie Secure/HttpOnly/SameSite, CSRF, upload 20 MB, idempotency, scheduler và log.
+5. Chạy lại E2E trên URL staging thật; xác nhận cookie Secure/HttpOnly/SameSite, CSRF, upload 10 MB, idempotency, scheduler và log.
 6. Backup database **và byte nội dung file**, restore vào database trống riêng, đăng nhập/mở hồ sơ/tải lại/checksum trước khi đánh dấu nghiệm thu.
 
 Cloudinary phân biệt URL phân phối ký thông thường và URL tải có thời hạn. Adapter dùng `private_download_url` với `expires_at=now+300`, đúng resource/delivery type; chỉ kiểm thử SDK/ký URL local chưa chứng minh dịch vụ thực đã hết hạn. [Kiểm soát truy cập Cloudinary](https://cloudinary.com/documentation/control_access_to_media), [raw upload](https://cloudinary.com/documentation/upload_parameters).

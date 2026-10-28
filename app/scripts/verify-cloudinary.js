@@ -2,7 +2,7 @@ import { writeFileSync } from "node:fs";
 import { randomUUID } from "node:crypto";
 import { PDFDocument } from "pdf-lib";
 import sharp from "sharp";
-import { cloudStorage, validateFile } from "../server/src/files.js";
+import { cloudStorage, validateFile, FILE_MAX } from "../server/src/files.js";
 import { hash, db } from "../server/src/core.js";
 const required = [
     "CLOUDINARY_CLOUD_NAME",
@@ -16,7 +16,7 @@ const report = {
   status: "not_run",
   missing,
   checks: {
-    upload20MB: "not_run",
+    upload10MB: "not_run",
     privatePdfDownload: "not_run",
     expiresAfter5Minutes: "not_run",
     publicImage: "not_run",
@@ -40,7 +40,7 @@ try {
       buffer = Buffer.concat([
         base,
         Buffer.from("\n%"),
-        Buffer.alloc(20000000 - base.length - 2 - suffix.length, 0x41),
+        Buffer.alloc(FILE_MAX - base.length - 2 - suffix.length, 0x41),
         suffix,
       ]);
     await validateFile(buffer, "capability.pdf", "report");
@@ -56,9 +56,9 @@ try {
         originalName: "capability.pdf",
       };
     assets.push(file);
-    if (result.bytes !== 20000000)
-      throw new Error("Uploaded byte count differs from 20 MB.");
-    report.checks.upload20MB = "passed";
+    if (result.bytes !== FILE_MAX)
+      throw new Error("Uploaded byte count differs from 10 MB.");
+    report.checks.upload10MB = "passed";
     const url = cloudStorage.download(file),
       response = await fetch(url, { signal: AbortSignal.timeout(120000) });
     if (!response.ok)

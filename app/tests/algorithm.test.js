@@ -120,13 +120,13 @@ describe("Thuật toán, file và định dạng", () => {
   });
   it("TC14: dung lượng MB thập phân", async () => {
     await expect(
-      validateFile(Buffer.alloc(20000001), "report.pdf", "report"),
+      validateFile(Buffer.alloc(10000001), "report.pdf", "report"),
     ).rejects.toMatchObject({ status: 413 });
     await expect(
       validateFile(Buffer.alloc(5000001), "photo.png", "private_image"),
     ).rejects.toMatchObject({ status: 413 });
     await expect(
-      validateFile(Buffer.alloc(20000000), "report.pdf", "report"),
+      validateFile(Buffer.alloc(10000000), "report.pdf", "report"),
     ).rejects.toMatchObject({ status: 415 });
   });
 });

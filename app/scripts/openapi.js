@@ -104,7 +104,7 @@ const schemas = {
       id: uuid,
       topicId: uuid,
       originalName: string,
-      sizeBytes: { type: "integer", minimum: 1, maximum: 20000000 },
+      sizeBytes: { type: "integer", minimum: 1, maximum: 10000000 },
       mimeType: string,
       status: { type: "string", enum: ["pending", "ready", "failed"] },
       purpose: {
@@ -1184,7 +1184,7 @@ manual("post", "/topics/{id}/attachments", {
   },
   data: ref("Attachment"),
   description:
-    "Upload một file qua Express; 20 MB tài liệu, 5 MB ảnh; raw/authenticated; không đồng nghĩa đã nộp.",
+    "Upload một file qua Express; 10 MB tài liệu, 5 MB ảnh; raw/authenticated; không đồng nghĩa đã nộp.",
 });
 paths["/topics/{id}/attachments"].post.responses[201].content = {
   "application/json": { schema: envelope(ref("Attachment")) },
