@@ -1,0 +1,46 @@
+# Template only. Do not apply services/plans without reviewing current pricing.
+envVarGroups:
+  - name: nckh-server-env
+    envVars:
+      - key: NODE_VERSION
+        value: 24.22.1
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_URL
+        sync: false
+      - key: MIGRATION_DATABASE_URL
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+      - key: JWT_ISSUER
+        value: nckh-api
+      - key: JWT_AUDIENCE
+        value: nckh-web
+      - key: APP_ORIGIN
+        sync: false
+      - key: COOKIE_SECURE
+        value: "true"
+      - key: CLOUDINARY_CLOUD_NAME
+        sync: false
+      - key: CLOUDINARY_API_KEY
+        sync: false
+      - key: CLOUDINARY_API_SECRET
+        sync: false
+services:
+  - type: web
+    name: nckh-api
+    runtime: node
+    buildCommand: npm ci --include=dev && npm run db:generate
+    preDeployCommand: npm run db:migrate
+    startCommand: npm start
+    healthCheckPath: /api/v1/ready
+    envVars:
+      - fromGroup: nckh-server-env
+  - type: cron
+    name: nckh-reminders-cleanup
+    runtime: node
+    schedule: "0 2 * * *"
+    buildCommand: npm ci --include=dev && npm run db:generate
+    startCommand: node app/server/src/jobs.js
+    envVars:
+      - fromGroup: nckh-server-env

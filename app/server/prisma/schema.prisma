@@ -1,0 +1,499 @@
+generator client {
+  provider = "prisma-client-js"
+}
+datasource db {
+  provider = "postgresql"
+  url = env("DATABASE_URL")
+  directUrl = env("MIGRATION_DATABASE_URL")
+}
+
+model Faculty {
+  id String @id @default(uuid()) @db.Uuid
+  code String @unique
+  name String
+  isActive Boolean @default(true) @map("is_active")
+  revision Int @default(1)
+  createdAt DateTime @default(now()) @db.Timestamptz(3) @map("created_at")
+  @@map("faculties")
+}
+
+model Major {
+  id String @id @default(uuid()) @db.Uuid
+  facultyId String @db.Uuid @map("faculty_id")
+  code String @unique
+  name String
+  isActive Boolean @default(true) @map("is_active")
+  revision Int @default(1)
+  createdAt DateTime @default(now()) @db.Timestamptz(3) @map("created_at")
+  @@map("majors")
+}
+
+model Class {
+  id String @id @default(uuid()) @db.Uuid
+  majorId String @db.Uuid @map("major_id")
+  code String @unique
+  name String
+  admissionYear Int @map("admission_year")
+  isActive Boolean @default(true) @map("is_active")
+  revision Int @default(1)
+  createdAt DateTime @default(now()) @db.Timestamptz(3) @map("created_at")
+  @@map("classes")
+}
+
+model User {
+  id String @id @default(uuid()) @db.Uuid
+  accountCode String @unique @map("account_code")
+  email String @unique
+  fullName String @map("full_name")
+  passwordHash String @map("password_hash")
+  facultyId String? @db.Uuid @map("faculty_id")
+  classId String? @db.Uuid @map("class_id")
+  specialization String?
+  avatarAssetId String? @map("avatar_asset_id")
+  avatarPublicId String? @map("avatar_public_id")
+  avatarUrl String? @map("avatar_url")
+  status String @default("active")
+  mustChangePassword Boolean @default(false) @map("must_change_password")
+  authVersion Int @default(1) @map("auth_version")
+  revision Int @default(1)
+  createdAt DateTime @default(now()) @db.Timestamptz(3) @map("created_at")
+  @@map("users")
+}
+
+model UserRole {
+  userId String @db.Uuid @map("user_id")
+  role String
+  @@id([userId, role])
+  @@map("user_roles")
+}
+
+model ManagementScope {
+  userId String @db.Uuid @map("user_id")
+  facultyId String @db.Uuid @map("faculty_id")
+  @@id([userId, facultyId])
+  @@map("management_scopes")
+}
+
+model RefreshSession {
+  id String @id @default(uuid()) @db.Uuid
+  userId String @db.Uuid @map("user_id")
+  familyId String @db.Uuid @map("family_id")
+  tokenHash String @unique @map("token_hash")
+  absoluteExpiresAt DateTime @db.Timestamptz(3) @map("absolute_expires_at")
+  rotatedAt DateTime? @db.Timestamptz(3) @map("rotated_at")
+  replacedBy String? @db.Uuid @map("replaced_by")
+  revokedAt DateTime? @db.Timestamptz(3) @map("revoked_at")
+  revokeReason String? @map("revoke_reason")
+  createdAt DateTime @default(now()) @db.Timestamptz(3) @map("created_at")
+  @@index([familyId])
+  @@map("refresh_sessions")
+}
+
+model ResearchPeriod {
+  id String @id @default(uuid()) @db.Uuid
+  facultyId String @db.Uuid @map("faculty_id")
+  name String
+  academicYear String @map("academic_year")
+  registrationStart DateTime @db.Timestamptz(3) @map("registration_start")
+  registrationEnd DateTime @db.Timestamptz(3) @map("registration_end")
+  minMembers Int @default(1) @map("min_members")
+  maxMembers Int @default(3) @map("max_members")
+  status String @default("open")
+  milestoneTemplates Json @default("[]") @map("milestone_templates")
+  revision Int @default(1)
+  createdAt DateTime @default(now()) @db.Timestamptz(3) @map("created_at")
+  @@map("research_periods")
+}
+
+model ResearchField {
+  id String @id @default(uuid()) @db.Uuid
+  code String @unique
+  name String
+  isActive Boolean @default(true) @map("is_active")
+  revision Int @default(1)
+  createdAt DateTime @default(now()) @db.Timestamptz(3) @map("created_at")
+  @@map("research_fields")
+}
+
+model Team {
+  id String @id @default(uuid()) @db.Uuid
+  periodId String @db.Uuid @map("period_id")
+  facultyId String @db.Uuid @map("faculty_id")
+  leaderId String @db.Uuid @map("leader_id")
+  name String
+  status String @default("active")
+  closedReason String? @map("closed_reason")
+  revision Int @default(1)
+  createdAt DateTime @default(now()) @db.Timestamptz(3) @map("created_at")
+  @@unique([id, periodId])
+  @@unique([id, periodId, facultyId])
+  @@map("teams")
+}
+
+model TeamMember {
+  id String @id @default(uuid()) @db.Uuid
+  teamId String @db.Uuid @map("team_id")
+  studentId String @db.Uuid @map("student_id")
+  periodId String @db.Uuid @map("period_id")
+  active Boolean @default(true)
+  joinedAt DateTime @default(now()) @db.Timestamptz(3) @map("joined_at")
+  leftAt DateTime? @db.Timestamptz(3) @map("left_at")
+  leftReason String? @map("left_reason")
+  revision Int @default(1)
+  @@unique([teamId, studentId])
+  @@map("team_members")
+}
+
+model TeamAccessGrant {
+  id String @id @default(uuid()) @db.Uuid
+  membershipId String @db.Uuid @map("membership_id")
+  readableFrom DateTime @db.Timestamptz(3) @map("readable_from")
+  readableUntil DateTime? @db.Timestamptz(3) @map("readable_until")
+  retainedAfterLeave Boolean @default(false) @map("retained_after_leave")
+  revokedAt DateTime? @db.Timestamptz(3) @map("revoked_at")
+  grantedBy String @db.Uuid @map("granted_by")
+  revokeReason String? @map("revoke_reason")
+  @@map("team_access_grants")
+}
+
+model TeamInvitation {
+  id String @id @default(uuid()) @db.Uuid
+  teamId String @db.Uuid @map("team_id")
+  inviteeId String @db.Uuid @map("invitee_id")
+  invitedBy String @db.Uuid @map("invited_by")
+  purpose String @default("initial")
+  changeRequestId String? @db.Uuid @map("change_request_id")
+  status String @default("pending")
+  expiresAt DateTime @db.Timestamptz(3) @map("expires_at")
+  respondedAt DateTime? @db.Timestamptz(3) @map("responded_at")
+  responseReason String? @map("response_reason")
+  revision Int @default(1)
+  createdAt DateTime @default(now()) @db.Timestamptz(3) @map("created_at")
+  @@map("team_invitations")
+}
+
+model Topic {
+  id String @id @default(uuid()) @db.Uuid
+  teamId String @db.Uuid @unique @map("team_id")
+  periodId String @db.Uuid @map("period_id")
+  facultyId String @db.Uuid @map("faculty_id")
+  fieldId String @db.Uuid @map("field_id")
+  supervisorId String? @db.Uuid @map("supervisor_id")
+  proposedSupervisorId String? @db.Uuid @map("proposed_supervisor_id")
+  code String @unique
+  title String @db.VarChar(250)
+  normalizedTitle String @map("normalized_title")
+  abstract String @default("")
+  objectives String @default("")
+  researchContent String @default("") @map("research_content")
+  methodology String @default("")
+  expectedOutcomes String @default("") @map("expected_outcomes")
+  status String @default("draft")
+  revision Int @default(1)
+  currentRevisionId String? @db.Uuid @map("current_revision_id")
+  revisionSequence Int @default(0) @map("revision_sequence")
+  evaluationSequence Int @default(0) @map("evaluation_sequence")
+  submittedAt DateTime? @db.Timestamptz(3) @map("submitted_at")
+  approvedAt DateTime? @db.Timestamptz(3) @map("approved_at")
+  completedAt DateTime? @db.Timestamptz(3) @map("completed_at")
+  createdAt DateTime @default(now()) @db.Timestamptz(3) @map("created_at")
+  @@unique([id, teamId])
+  @@index([facultyId, periodId, status])
+  @@index([fieldId])
+  @@index([supervisorId])
+  @@map("topics")
+}
+
+model TopicRevision {
+  id String @id @default(uuid()) @db.Uuid
+  topicId String @db.Uuid @map("topic_id")
+  version Int
+  kind String @default("submission")
+  snapshot Json
+  createdBy String @db.Uuid @map("created_by")
+  similarityCheckId String? @db.Uuid @map("similarity_check_id")
+  sourceChangeRequestId String? @db.Uuid @map("source_change_request_id")
+  publishedAt DateTime @default(now()) @db.Timestamptz(3) @map("published_at")
+  @@unique([topicId, version])
+  @@unique([id, topicId])
+  @@map("topic_revisions")
+}
+
+model TopicRevisionFile {
+  topicRevisionId String @db.Uuid @map("topic_revision_id")
+  attachmentId String @db.Uuid @map("attachment_id")
+  topicId String @db.Uuid @map("topic_id")
+  @@id([topicRevisionId, attachmentId])
+  @@map("topic_revision_files")
+}
+
+model SupervisionRequest {
+  id String @id @default(uuid()) @db.Uuid
+  topicId String @db.Uuid @map("topic_id")
+  lecturerId String @db.Uuid @map("lecturer_id")
+  requestedBy String @db.Uuid @map("requested_by")
+  purpose String @default("initial")
+  changeRequestId String? @db.Uuid @map("change_request_id")
+  academicHash String @map("academic_hash")
+  status String @default("pending")
+  expiresAt DateTime? @db.Timestamptz(3) @map("expires_at")
+  respondedAt DateTime? @db.Timestamptz(3) @map("responded_at")
+  responseReason String? @map("response_reason")
+  revision Int @default(1)
+  createdAt DateTime @default(now()) @db.Timestamptz(3) @map("created_at")
+  @@map("supervision_requests")
+}
+
+model SupervisorAssignment {
+  id String @id @default(uuid()) @db.Uuid
+  topicId String @db.Uuid @map("topic_id")
+  lecturerId String @db.Uuid @map("lecturer_id")
+  assignedBy String @db.Uuid @map("assigned_by")
+  startedAt DateTime @default(now()) @db.Timestamptz(3) @map("started_at")
+  endedAt DateTime? @db.Timestamptz(3) @map("ended_at")
+  reason String?
+  @@map("supervisor_assignments")
+}
+
+model TopicDecision {
+  id String @id @default(uuid()) @db.Uuid
+  topicRevisionId String @db.Uuid @map("topic_revision_id")
+  decidedBy String @db.Uuid @map("decided_by")
+  action String
+  reason String?
+  similarityCheckId String? @db.Uuid @map("similarity_check_id")
+  warningJustification String? @map("warning_justification")
+  createdAt DateTime @default(now()) @db.Timestamptz(3) @map("created_at")
+  @@map("topic_decisions")
+}
+
+model TopicChangeRequest {
+  id String @id @default(uuid()) @db.Uuid
+  topicId String @db.Uuid @map("topic_id")
+  requestedBy String @db.Uuid @map("requested_by")
+  type String
+  beforeData Json @map("before_data")
+  afterData Json @map("after_data")
+  baseRevision Int @map("base_revision")
+  reason String
+  status String @default("pending")
+  similarityCheckId String? @db.Uuid @map("similarity_check_id")
+  decidedBy String? @db.Uuid @map("decided_by")
+  decisionReason String? @map("decision_reason")
+  decidedAt DateTime? @db.Timestamptz(3) @map("decided_at")
+  revision Int @default(1)
+  createdAt DateTime @default(now()) @db.Timestamptz(3) @map("created_at")
+  @@map("topic_change_requests")
+}
+
+model TopicCancellationRequest {
+  id String @id @default(uuid()) @db.Uuid
+  topicId String @db.Uuid @map("topic_id")
+  requestedBy String @db.Uuid @map("requested_by")
+  reason String
+  status String @default("pending")
+  decidedBy String? @db.Uuid @map("decided_by")
+  decisionReason String? @map("decision_reason")
+  decidedAt DateTime? @db.Timestamptz(3) @map("decided_at")
+  revision Int @default(1)
+  createdAt DateTime @default(now()) @db.Timestamptz(3) @map("created_at")
+  @@map("topic_cancellation_requests")
+}
+
+model Milestone {
+  id String @id @default(uuid()) @db.Uuid
+  topicId String @db.Uuid @map("topic_id")
+  code String
+  name String
+  required Boolean @default(true)
+  expectedOutput String @map("expected_output")
+  deadline DateTime @db.Timestamptz(3)
+  deadlineVersion Int @default(1) @map("deadline_version")
+  sortOrder Int @default(0) @map("sort_order")
+  resubmissionAllowed Boolean @default(false) @map("resubmission_allowed")
+  submissionSequence Int @default(0) @map("submission_sequence")
+  revision Int @default(1)
+  createdAt DateTime @default(now()) @db.Timestamptz(3) @map("created_at")
+  @@unique([topicId, code])
+  @@unique([id, topicId])
+  @@map("milestones")
+}
+
+model ProgressUpdate {
+  id String @id @default(uuid()) @db.Uuid
+  topicId String @db.Uuid @map("topic_id")
+  milestoneId String? @db.Uuid @map("milestone_id")
+  authorId String @db.Uuid @map("author_id")
+  completedWork String @map("completed_work")
+  difficulties String
+  nextPlan String @map("next_plan")
+  selfReportedPercent Int @map("self_reported_percent")
+  createdAt DateTime @default(now()) @db.Timestamptz(3) @map("created_at")
+  @@map("progress_updates")
+}
+
+model Attachment {
+  id String @id @default(uuid()) @db.Uuid
+  topicId String @db.Uuid @map("topic_id")
+  uploadedBy String @db.Uuid @map("uploaded_by")
+  purpose String
+  originalName String @map("original_name")
+  mimeType String @map("mime_type")
+  sizeBytes Int @map("size_bytes")
+  assetId String? @unique @map("asset_id")
+  publicId String @unique @map("public_id")
+  resourceType String @default("raw") @map("resource_type")
+  deliveryType String @default("authenticated") @map("delivery_type")
+  sha256 String?
+  status String @default("pending")
+  verifiedAt DateTime? @db.Timestamptz(3) @map("verified_at")
+  errorCode String? @map("error_code")
+  createdAt DateTime @default(now()) @db.Timestamptz(3) @map("created_at")
+  @@unique([id, topicId])
+  @@map("attachments")
+}
+
+model Submission {
+  id String @id @default(uuid()) @db.Uuid
+  topicId String @db.Uuid @map("topic_id")
+  milestoneId String @db.Uuid @map("milestone_id")
+  submittedBy String @db.Uuid @map("submitted_by")
+  version Int
+  note String?
+  status String @default("pending_review")
+  submittedAt DateTime @default(now()) @db.Timestamptz(3) @map("submitted_at")
+  deadlineSnapshot DateTime @db.Timestamptz(3) @map("deadline_snapshot")
+  isLate Boolean @map("is_late")
+  revision Int @default(1)
+  @@unique([milestoneId, version])
+  @@unique([id, topicId])
+  @@map("submissions")
+}
+
+model SubmissionFile {
+  submissionId String @db.Uuid @map("submission_id")
+  attachmentId String @unique @db.Uuid @map("attachment_id")
+  topicId String @db.Uuid @map("topic_id")
+  @@id([submissionId, attachmentId])
+  @@map("submission_files")
+}
+
+model Review {
+  id String @id @default(uuid()) @db.Uuid
+  submissionId String @db.Uuid @map("submission_id")
+  reviewerId String @db.Uuid @map("reviewer_id")
+  comment String
+  decision String
+  supersedesReviewId String? @db.Uuid @map("supersedes_review_id")
+  createdAt DateTime @default(now()) @db.Timestamptz(3) @map("created_at")
+  @@map("reviews")
+}
+
+model Evaluation {
+  id String @id @default(uuid()) @db.Uuid
+  topicId String @db.Uuid @map("topic_id")
+  version Int
+  evaluatorId String @db.Uuid @map("evaluator_id")
+  result String
+  score Decimal? @db.Decimal(4, 2)
+  comment String
+  correctionReason String? @map("correction_reason")
+  supersedesId String? @db.Uuid @map("supersedes_id")
+  createdAt DateTime @default(now()) @db.Timestamptz(3) @map("created_at")
+  @@unique([topicId, version])
+  @@map("evaluations")
+}
+
+model SimilarityCorpus {
+  id String @id @default(uuid()) @db.Uuid
+  version Int @unique
+  algorithmVersion String @map("algorithm_version")
+  normalizerVersion String @map("normalizer_version")
+  stopwordsVersion String @map("stopwords_version")
+  config Json
+  corpusSize Int @map("corpus_size")
+  isActive Boolean @default(true) @map("is_active")
+  builtAt DateTime @default(now()) @db.Timestamptz(3) @map("built_at")
+  @@map("similarity_corpora")
+}
+
+model SimilarityCheck {
+  id String @id @default(uuid()) @db.Uuid
+  topicId String @db.Uuid @map("topic_id")
+  requestedBy String @db.Uuid @map("requested_by")
+  purpose String
+  corpusId String @db.Uuid @map("corpus_id")
+  inputSnapshot Json @map("input_snapshot")
+  inputHash String @map("input_hash")
+  status String @default("succeeded")
+  exactTitleMatch Boolean? @map("exact_title_match")
+  titleThreshold Float? @map("title_threshold")
+  contentThreshold Float? @map("content_threshold")
+  hasWarning Boolean? @map("has_warning")
+  errorCode String? @map("error_code")
+  completedAt DateTime? @db.Timestamptz(3) @map("completed_at")
+  createdAt DateTime @default(now()) @db.Timestamptz(3) @map("created_at")
+  @@map("similarity_checks")
+}
+
+model SimilarityMatch {
+  id String @id @default(uuid()) @db.Uuid
+  checkId String @db.Uuid @map("check_id")
+  candidateTopicId String @db.Uuid @map("candidate_topic_id")
+  candidateRevisionId String @db.Uuid @map("candidate_revision_id")
+  rank Int
+  titleScore Float @map("title_score")
+  contentScore Float @map("content_score")
+  candidateMetadata Json @map("candidate_metadata")
+  @@unique([checkId, rank])
+  @@unique([checkId, candidateTopicId])
+  @@map("similarity_matches")
+}
+
+model Notification {
+  id String @id @default(uuid()) @db.Uuid
+  recipientId String @db.Uuid @map("recipient_id")
+  type String
+  title String
+  body String
+  entityType String @map("entity_type")
+  entityId String? @db.Uuid @map("entity_id")
+  eventKey String @map("event_key")
+  readAt DateTime? @db.Timestamptz(3) @map("read_at")
+  createdAt DateTime @default(now()) @db.Timestamptz(3) @map("created_at")
+  @@unique([recipientId, eventKey])
+  @@index([recipientId, createdAt])
+  @@map("notifications")
+}
+
+model AuditLog {
+  id String @id @default(uuid()) @db.Uuid
+  actorId String? @db.Uuid @map("actor_id")
+  actorKind String @default("user") @map("actor_kind")
+  action String
+  entityType String @map("entity_type")
+  entityId String @db.Uuid @map("entity_id")
+  facultyId String? @db.Uuid @map("faculty_id")
+  beforeData Json? @map("before_data")
+  afterData Json? @map("after_data")
+  reason String?
+  requestId String @map("request_id")
+  createdAt DateTime @default(now()) @db.Timestamptz(3) @map("created_at")
+  @@index([facultyId, createdAt])
+  @@index([entityId, createdAt])
+  @@map("audit_logs")
+}
+
+model IdempotencyRecord {
+  id String @id @default(uuid()) @db.Uuid
+  actorId String @db.Uuid @map("actor_id")
+  operation String
+  idempotencyKey String @map("idempotency_key")
+  requestHash String @map("request_hash")
+  status String @default("completed")
+  responseStatus Int @map("response_status")
+  responseData Json @map("response_data")
+  expiresAt DateTime @db.Timestamptz(3) @map("expires_at")
+  @@unique([actorId, operation, idempotencyKey])
+  @@map("idempotency_records")
+}

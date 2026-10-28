@@ -1,0 +1,18 @@
+{
+  "at": "2026-10-22T09:33:46.376Z",
+  "status": "blocked",
+  "missing": [
+    "CLOUDINARY_CLOUD_NAME",
+    "CLOUDINARY_API_KEY",
+    "CLOUDINARY_API_SECRET"
+  ],
+  "checks": {
+    "upload20MB": "not_run",
+    "privatePdfDownload": "not_run",
+    "expiresAfter5Minutes": "not_run",
+    "publicImage": "not_run"
+  },
+  "notes": [
+    "Configure the missing variables in .env. Never send secrets in chat."
+  ]
+}

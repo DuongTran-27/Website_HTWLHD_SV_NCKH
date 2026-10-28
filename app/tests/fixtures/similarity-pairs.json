@@ -1,0 +1,905 @@
+{
+  "provenance": "Synthetic engineering fixtures, labels assigned by construction; not independently annotated academic data.",
+  "pairs": [
+    {
+      "sourceId": "source-0",
+      "split": "calibration",
+      "label": "duplicate",
+      "positive": true,
+      "left": {
+        "id": "source-0",
+        "title": "Xây dựng hệ thống phân loại bệnh trên lá cây tại địa phương",
+        "text": "Bài toán phân loại bệnh trên lá cây được nghiên cứu bằng ảnh lá và mạng tích chập. Thu thập ảnh lá và mạng tích chập để thiết kế giải pháp phân loại bệnh trên lá cây. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với ảnh lá và mạng tích chập."
+      },
+      "right": {
+        "title": "  XÂY DỰNG HỆ THỐNG PHÂN LOẠI BỆNH TRÊN LÁ CÂY TẠI ĐỊA PHƯƠNG!  ",
+        "text": "Bài toán phân loại bệnh trên lá cây được nghiên cứu bằng ảnh lá và mạng tích chập. Thu thập ảnh lá và mạng tích chập để thiết kế giải pháp phân loại bệnh trên lá cây. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với ảnh lá và mạng tích chập."
+      }
+    },
+    {
+      "sourceId": "source-0",
+      "split": "calibration",
+      "label": "near",
+      "positive": true,
+      "left": {
+        "id": "source-0",
+        "title": "Xây dựng hệ thống phân loại bệnh trên lá cây tại địa phương",
+        "text": "Bài toán phân loại bệnh trên lá cây được nghiên cứu bằng ảnh lá và mạng tích chập. Thu thập ảnh lá và mạng tích chập để thiết kế giải pháp phân loại bệnh trên lá cây. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với ảnh lá và mạng tích chập."
+      },
+      "right": {
+        "title": "Nghiên cứu giải pháp phân loại bệnh trên lá cây ứng dụng trong thực tiễn",
+        "text": "Đề xuất giải pháp phân loại bệnh trên lá cây dựa trên ảnh lá và mạng tích chập. Phân tích và thu thập ảnh lá và mạng tích chập, xây dựng nguyên mẫu và đánh giá độ chính xác trên dữ liệu kiểm thử. Mục tiêu hỗ trợ phân loại bệnh trên lá cây thông qua thử nghiệm thực tế."
+      }
+    },
+    {
+      "sourceId": "source-0",
+      "split": "calibration",
+      "label": "different",
+      "positive": false,
+      "left": {
+        "id": "source-0",
+        "title": "Xây dựng hệ thống phân loại bệnh trên lá cây tại địa phương",
+        "text": "Bài toán phân loại bệnh trên lá cây được nghiên cứu bằng ảnh lá và mạng tích chập. Thu thập ảnh lá và mạng tích chập để thiết kế giải pháp phân loại bệnh trên lá cây. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với ảnh lá và mạng tích chập."
+      },
+      "right": {
+        "title": "Xây dựng hệ thống dự báo mực nước sông tại địa phương",
+        "text": "Bài toán dự báo mực nước sông được nghiên cứu bằng dữ liệu thủy văn theo thời gian. Thu thập dữ liệu thủy văn theo thời gian để thiết kế giải pháp dự báo mực nước sông. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với dữ liệu thủy văn theo thời gian."
+      }
+    },
+    {
+      "sourceId": "source-1",
+      "split": "calibration",
+      "label": "duplicate",
+      "positive": true,
+      "left": {
+        "id": "source-1",
+        "title": "Xây dựng hệ thống dự báo mực nước sông tại địa phương",
+        "text": "Bài toán dự báo mực nước sông được nghiên cứu bằng dữ liệu thủy văn theo thời gian. Thu thập dữ liệu thủy văn theo thời gian để thiết kế giải pháp dự báo mực nước sông. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với dữ liệu thủy văn theo thời gian."
+      },
+      "right": {
+        "title": "  XÂY DỰNG HỆ THỐNG DỰ BÁO MỰC NƯỚC SÔNG TẠI ĐỊA PHƯƠNG!  ",
+        "text": "Bài toán dự báo mực nước sông được nghiên cứu bằng dữ liệu thủy văn theo thời gian. Thu thập dữ liệu thủy văn theo thời gian để thiết kế giải pháp dự báo mực nước sông. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với dữ liệu thủy văn theo thời gian."
+      }
+    },
+    {
+      "sourceId": "source-1",
+      "split": "calibration",
+      "label": "near",
+      "positive": true,
+      "left": {
+        "id": "source-1",
+        "title": "Xây dựng hệ thống dự báo mực nước sông tại địa phương",
+        "text": "Bài toán dự báo mực nước sông được nghiên cứu bằng dữ liệu thủy văn theo thời gian. Thu thập dữ liệu thủy văn theo thời gian để thiết kế giải pháp dự báo mực nước sông. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với dữ liệu thủy văn theo thời gian."
+      },
+      "right": {
+        "title": "Nghiên cứu giải pháp dự báo mực nước sông ứng dụng trong thực tiễn",
+        "text": "Đề xuất giải pháp dự báo mực nước sông dựa trên dữ liệu thủy văn theo thời gian. Phân tích và thu thập dữ liệu thủy văn theo thời gian, xây dựng nguyên mẫu và đánh giá độ chính xác trên dữ liệu kiểm thử. Mục tiêu hỗ trợ dự báo mực nước sông thông qua thử nghiệm thực tế."
+      }
+    },
+    {
+      "sourceId": "source-1",
+      "split": "calibration",
+      "label": "different",
+      "positive": false,
+      "left": {
+        "id": "source-1",
+        "title": "Xây dựng hệ thống dự báo mực nước sông tại địa phương",
+        "text": "Bài toán dự báo mực nước sông được nghiên cứu bằng dữ liệu thủy văn theo thời gian. Thu thập dữ liệu thủy văn theo thời gian để thiết kế giải pháp dự báo mực nước sông. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với dữ liệu thủy văn theo thời gian."
+      },
+      "right": {
+        "title": "Xây dựng hệ thống quản lý ký túc xá tại địa phương",
+        "text": "Bài toán quản lý ký túc xá được nghiên cứu bằng hồ sơ cư trú và phòng ở. Thu thập hồ sơ cư trú và phòng ở để thiết kế giải pháp quản lý ký túc xá. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với hồ sơ cư trú và phòng ở."
+      }
+    },
+    {
+      "sourceId": "source-2",
+      "split": "calibration",
+      "label": "duplicate",
+      "positive": true,
+      "left": {
+        "id": "source-2",
+        "title": "Xây dựng hệ thống quản lý ký túc xá tại địa phương",
+        "text": "Bài toán quản lý ký túc xá được nghiên cứu bằng hồ sơ cư trú và phòng ở. Thu thập hồ sơ cư trú và phòng ở để thiết kế giải pháp quản lý ký túc xá. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với hồ sơ cư trú và phòng ở."
+      },
+      "right": {
+        "title": "  XÂY DỰNG HỆ THỐNG QUẢN LÝ KÝ TÚC XÁ TẠI ĐỊA PHƯƠNG!  ",
+        "text": "Bài toán quản lý ký túc xá được nghiên cứu bằng hồ sơ cư trú và phòng ở. Thu thập hồ sơ cư trú và phòng ở để thiết kế giải pháp quản lý ký túc xá. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với hồ sơ cư trú và phòng ở."
+      }
+    },
+    {
+      "sourceId": "source-2",
+      "split": "calibration",
+      "label": "near",
+      "positive": true,
+      "left": {
+        "id": "source-2",
+        "title": "Xây dựng hệ thống quản lý ký túc xá tại địa phương",
+        "text": "Bài toán quản lý ký túc xá được nghiên cứu bằng hồ sơ cư trú và phòng ở. Thu thập hồ sơ cư trú và phòng ở để thiết kế giải pháp quản lý ký túc xá. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với hồ sơ cư trú và phòng ở."
+      },
+      "right": {
+        "title": "Nghiên cứu giải pháp quản lý ký túc xá ứng dụng trong thực tiễn",
+        "text": "Đề xuất giải pháp quản lý ký túc xá dựa trên hồ sơ cư trú và phòng ở. Phân tích và thu thập hồ sơ cư trú và phòng ở, xây dựng nguyên mẫu và đánh giá độ chính xác trên dữ liệu kiểm thử. Mục tiêu hỗ trợ quản lý ký túc xá thông qua thử nghiệm thực tế."
+      }
+    },
+    {
+      "sourceId": "source-2",
+      "split": "calibration",
+      "label": "different",
+      "positive": false,
+      "left": {
+        "id": "source-2",
+        "title": "Xây dựng hệ thống quản lý ký túc xá tại địa phương",
+        "text": "Bài toán quản lý ký túc xá được nghiên cứu bằng hồ sơ cư trú và phòng ở. Thu thập hồ sơ cư trú và phòng ở để thiết kế giải pháp quản lý ký túc xá. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với hồ sơ cư trú và phòng ở."
+      },
+      "right": {
+        "title": "Xây dựng hệ thống nhận diện biển số xe tại địa phương",
+        "text": "Bài toán nhận diện biển số xe được nghiên cứu bằng ảnh xe và nhận dạng ký tự. Thu thập ảnh xe và nhận dạng ký tự để thiết kế giải pháp nhận diện biển số xe. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với ảnh xe và nhận dạng ký tự."
+      }
+    },
+    {
+      "sourceId": "source-3",
+      "split": "calibration",
+      "label": "duplicate",
+      "positive": true,
+      "left": {
+        "id": "source-3",
+        "title": "Xây dựng hệ thống nhận diện biển số xe tại địa phương",
+        "text": "Bài toán nhận diện biển số xe được nghiên cứu bằng ảnh xe và nhận dạng ký tự. Thu thập ảnh xe và nhận dạng ký tự để thiết kế giải pháp nhận diện biển số xe. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với ảnh xe và nhận dạng ký tự."
+      },
+      "right": {
+        "title": "  XÂY DỰNG HỆ THỐNG NHẬN DIỆN BIỂN SỐ XE TẠI ĐỊA PHƯƠNG!  ",
+        "text": "Bài toán nhận diện biển số xe được nghiên cứu bằng ảnh xe và nhận dạng ký tự. Thu thập ảnh xe và nhận dạng ký tự để thiết kế giải pháp nhận diện biển số xe. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với ảnh xe và nhận dạng ký tự."
+      }
+    },
+    {
+      "sourceId": "source-3",
+      "split": "calibration",
+      "label": "near",
+      "positive": true,
+      "left": {
+        "id": "source-3",
+        "title": "Xây dựng hệ thống nhận diện biển số xe tại địa phương",
+        "text": "Bài toán nhận diện biển số xe được nghiên cứu bằng ảnh xe và nhận dạng ký tự. Thu thập ảnh xe và nhận dạng ký tự để thiết kế giải pháp nhận diện biển số xe. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với ảnh xe và nhận dạng ký tự."
+      },
+      "right": {
+        "title": "Nghiên cứu giải pháp nhận diện biển số xe ứng dụng trong thực tiễn",
+        "text": "Đề xuất giải pháp nhận diện biển số xe dựa trên ảnh xe và nhận dạng ký tự. Phân tích và thu thập ảnh xe và nhận dạng ký tự, xây dựng nguyên mẫu và đánh giá độ chính xác trên dữ liệu kiểm thử. Mục tiêu hỗ trợ nhận diện biển số xe thông qua thử nghiệm thực tế."
+      }
+    },
+    {
+      "sourceId": "source-3",
+      "split": "calibration",
+      "label": "different",
+      "positive": false,
+      "left": {
+        "id": "source-3",
+        "title": "Xây dựng hệ thống nhận diện biển số xe tại địa phương",
+        "text": "Bài toán nhận diện biển số xe được nghiên cứu bằng ảnh xe và nhận dạng ký tự. Thu thập ảnh xe và nhận dạng ký tự để thiết kế giải pháp nhận diện biển số xe. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với ảnh xe và nhận dạng ký tự."
+      },
+      "right": {
+        "title": "Xây dựng hệ thống đặt lịch khám bệnh tại địa phương",
+        "text": "Bài toán đặt lịch khám bệnh được nghiên cứu bằng lịch bác sĩ và hồ sơ bệnh nhân. Thu thập lịch bác sĩ và hồ sơ bệnh nhân để thiết kế giải pháp đặt lịch khám bệnh. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với lịch bác sĩ và hồ sơ bệnh nhân."
+      }
+    },
+    {
+      "sourceId": "source-4",
+      "split": "calibration",
+      "label": "duplicate",
+      "positive": true,
+      "left": {
+        "id": "source-4",
+        "title": "Xây dựng hệ thống đặt lịch khám bệnh tại địa phương",
+        "text": "Bài toán đặt lịch khám bệnh được nghiên cứu bằng lịch bác sĩ và hồ sơ bệnh nhân. Thu thập lịch bác sĩ và hồ sơ bệnh nhân để thiết kế giải pháp đặt lịch khám bệnh. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với lịch bác sĩ và hồ sơ bệnh nhân."
+      },
+      "right": {
+        "title": "  XÂY DỰNG HỆ THỐNG ĐẶT LỊCH KHÁM BỆNH TẠI ĐỊA PHƯƠNG!  ",
+        "text": "Bài toán đặt lịch khám bệnh được nghiên cứu bằng lịch bác sĩ và hồ sơ bệnh nhân. Thu thập lịch bác sĩ và hồ sơ bệnh nhân để thiết kế giải pháp đặt lịch khám bệnh. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với lịch bác sĩ và hồ sơ bệnh nhân."
+      }
+    },
+    {
+      "sourceId": "source-4",
+      "split": "calibration",
+      "label": "near",
+      "positive": true,
+      "left": {
+        "id": "source-4",
+        "title": "Xây dựng hệ thống đặt lịch khám bệnh tại địa phương",
+        "text": "Bài toán đặt lịch khám bệnh được nghiên cứu bằng lịch bác sĩ và hồ sơ bệnh nhân. Thu thập lịch bác sĩ và hồ sơ bệnh nhân để thiết kế giải pháp đặt lịch khám bệnh. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với lịch bác sĩ và hồ sơ bệnh nhân."
+      },
+      "right": {
+        "title": "Nghiên cứu giải pháp đặt lịch khám bệnh ứng dụng trong thực tiễn",
+        "text": "Đề xuất giải pháp đặt lịch khám bệnh dựa trên lịch bác sĩ và hồ sơ bệnh nhân. Phân tích và thu thập lịch bác sĩ và hồ sơ bệnh nhân, xây dựng nguyên mẫu và đánh giá độ chính xác trên dữ liệu kiểm thử. Mục tiêu hỗ trợ đặt lịch khám bệnh thông qua thử nghiệm thực tế."
+      }
+    },
+    {
+      "sourceId": "source-4",
+      "split": "calibration",
+      "label": "different",
+      "positive": false,
+      "left": {
+        "id": "source-4",
+        "title": "Xây dựng hệ thống đặt lịch khám bệnh tại địa phương",
+        "text": "Bài toán đặt lịch khám bệnh được nghiên cứu bằng lịch bác sĩ và hồ sơ bệnh nhân. Thu thập lịch bác sĩ và hồ sơ bệnh nhân để thiết kế giải pháp đặt lịch khám bệnh. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với lịch bác sĩ và hồ sơ bệnh nhân."
+      },
+      "right": {
+        "title": "Xây dựng hệ thống theo dõi chất lượng nước tại địa phương",
+        "text": "Bài toán theo dõi chất lượng nước được nghiên cứu bằng cảm biến pH và độ đục. Thu thập cảm biến pH và độ đục để thiết kế giải pháp theo dõi chất lượng nước. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với cảm biến pH và độ đục."
+      }
+    },
+    {
+      "sourceId": "source-5",
+      "split": "calibration",
+      "label": "duplicate",
+      "positive": true,
+      "left": {
+        "id": "source-5",
+        "title": "Xây dựng hệ thống theo dõi chất lượng nước tại địa phương",
+        "text": "Bài toán theo dõi chất lượng nước được nghiên cứu bằng cảm biến pH và độ đục. Thu thập cảm biến pH và độ đục để thiết kế giải pháp theo dõi chất lượng nước. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với cảm biến pH và độ đục."
+      },
+      "right": {
+        "title": "  XÂY DỰNG HỆ THỐNG THEO DÕI CHẤT LƯỢNG NƯỚC TẠI ĐỊA PHƯƠNG!  ",
+        "text": "Bài toán theo dõi chất lượng nước được nghiên cứu bằng cảm biến pH và độ đục. Thu thập cảm biến pH và độ đục để thiết kế giải pháp theo dõi chất lượng nước. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với cảm biến pH và độ đục."
+      }
+    },
+    {
+      "sourceId": "source-5",
+      "split": "calibration",
+      "label": "near",
+      "positive": true,
+      "left": {
+        "id": "source-5",
+        "title": "Xây dựng hệ thống theo dõi chất lượng nước tại địa phương",
+        "text": "Bài toán theo dõi chất lượng nước được nghiên cứu bằng cảm biến pH và độ đục. Thu thập cảm biến pH và độ đục để thiết kế giải pháp theo dõi chất lượng nước. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với cảm biến pH và độ đục."
+      },
+      "right": {
+        "title": "Nghiên cứu giải pháp theo dõi chất lượng nước ứng dụng trong thực tiễn",
+        "text": "Đề xuất giải pháp theo dõi chất lượng nước dựa trên cảm biến pH và độ đục. Phân tích và thu thập cảm biến pH và độ đục, xây dựng nguyên mẫu và đánh giá độ chính xác trên dữ liệu kiểm thử. Mục tiêu hỗ trợ theo dõi chất lượng nước thông qua thử nghiệm thực tế."
+      }
+    },
+    {
+      "sourceId": "source-5",
+      "split": "calibration",
+      "label": "different",
+      "positive": false,
+      "left": {
+        "id": "source-5",
+        "title": "Xây dựng hệ thống theo dõi chất lượng nước tại địa phương",
+        "text": "Bài toán theo dõi chất lượng nước được nghiên cứu bằng cảm biến pH và độ đục. Thu thập cảm biến pH và độ đục để thiết kế giải pháp theo dõi chất lượng nước. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với cảm biến pH và độ đục."
+      },
+      "right": {
+        "title": "Xây dựng hệ thống tư vấn chọn học phần tại địa phương",
+        "text": "Bài toán tư vấn chọn học phần được nghiên cứu bằng chương trình học và sở thích sinh viên. Thu thập chương trình học và sở thích sinh viên để thiết kế giải pháp tư vấn chọn học phần. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với chương trình học và sở thích sinh viên."
+      }
+    },
+    {
+      "sourceId": "source-6",
+      "split": "calibration",
+      "label": "duplicate",
+      "positive": true,
+      "left": {
+        "id": "source-6",
+        "title": "Xây dựng hệ thống tư vấn chọn học phần tại địa phương",
+        "text": "Bài toán tư vấn chọn học phần được nghiên cứu bằng chương trình học và sở thích sinh viên. Thu thập chương trình học và sở thích sinh viên để thiết kế giải pháp tư vấn chọn học phần. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với chương trình học và sở thích sinh viên."
+      },
+      "right": {
+        "title": "  XÂY DỰNG HỆ THỐNG TƯ VẤN CHỌN HỌC PHẦN TẠI ĐỊA PHƯƠNG!  ",
+        "text": "Bài toán tư vấn chọn học phần được nghiên cứu bằng chương trình học và sở thích sinh viên. Thu thập chương trình học và sở thích sinh viên để thiết kế giải pháp tư vấn chọn học phần. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với chương trình học và sở thích sinh viên."
+      }
+    },
+    {
+      "sourceId": "source-6",
+      "split": "calibration",
+      "label": "near",
+      "positive": true,
+      "left": {
+        "id": "source-6",
+        "title": "Xây dựng hệ thống tư vấn chọn học phần tại địa phương",
+        "text": "Bài toán tư vấn chọn học phần được nghiên cứu bằng chương trình học và sở thích sinh viên. Thu thập chương trình học và sở thích sinh viên để thiết kế giải pháp tư vấn chọn học phần. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với chương trình học và sở thích sinh viên."
+      },
+      "right": {
+        "title": "Nghiên cứu giải pháp tư vấn chọn học phần ứng dụng trong thực tiễn",
+        "text": "Đề xuất giải pháp tư vấn chọn học phần dựa trên chương trình học và sở thích sinh viên. Phân tích và thu thập chương trình học và sở thích sinh viên, xây dựng nguyên mẫu và đánh giá độ chính xác trên dữ liệu kiểm thử. Mục tiêu hỗ trợ tư vấn chọn học phần thông qua thử nghiệm thực tế."
+      }
+    },
+    {
+      "sourceId": "source-6",
+      "split": "calibration",
+      "label": "different",
+      "positive": false,
+      "left": {
+        "id": "source-6",
+        "title": "Xây dựng hệ thống tư vấn chọn học phần tại địa phương",
+        "text": "Bài toán tư vấn chọn học phần được nghiên cứu bằng chương trình học và sở thích sinh viên. Thu thập chương trình học và sở thích sinh viên để thiết kế giải pháp tư vấn chọn học phần. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với chương trình học và sở thích sinh viên."
+      },
+      "right": {
+        "title": "Xây dựng hệ thống tối ưu tuyến thu gom rác tại địa phương",
+        "text": "Bài toán tối ưu tuyến thu gom rác được nghiên cứu bằng đồ thị đường phố và thùng rác. Thu thập đồ thị đường phố và thùng rác để thiết kế giải pháp tối ưu tuyến thu gom rác. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với đồ thị đường phố và thùng rác."
+      }
+    },
+    {
+      "sourceId": "source-7",
+      "split": "calibration",
+      "label": "duplicate",
+      "positive": true,
+      "left": {
+        "id": "source-7",
+        "title": "Xây dựng hệ thống tối ưu tuyến thu gom rác tại địa phương",
+        "text": "Bài toán tối ưu tuyến thu gom rác được nghiên cứu bằng đồ thị đường phố và thùng rác. Thu thập đồ thị đường phố và thùng rác để thiết kế giải pháp tối ưu tuyến thu gom rác. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với đồ thị đường phố và thùng rác."
+      },
+      "right": {
+        "title": "  XÂY DỰNG HỆ THỐNG TỐI ƯU TUYẾN THU GOM RÁC TẠI ĐỊA PHƯƠNG!  ",
+        "text": "Bài toán tối ưu tuyến thu gom rác được nghiên cứu bằng đồ thị đường phố và thùng rác. Thu thập đồ thị đường phố và thùng rác để thiết kế giải pháp tối ưu tuyến thu gom rác. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với đồ thị đường phố và thùng rác."
+      }
+    },
+    {
+      "sourceId": "source-7",
+      "split": "calibration",
+      "label": "near",
+      "positive": true,
+      "left": {
+        "id": "source-7",
+        "title": "Xây dựng hệ thống tối ưu tuyến thu gom rác tại địa phương",
+        "text": "Bài toán tối ưu tuyến thu gom rác được nghiên cứu bằng đồ thị đường phố và thùng rác. Thu thập đồ thị đường phố và thùng rác để thiết kế giải pháp tối ưu tuyến thu gom rác. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với đồ thị đường phố và thùng rác."
+      },
+      "right": {
+        "title": "Nghiên cứu giải pháp tối ưu tuyến thu gom rác ứng dụng trong thực tiễn",
+        "text": "Đề xuất giải pháp tối ưu tuyến thu gom rác dựa trên đồ thị đường phố và thùng rác. Phân tích và thu thập đồ thị đường phố và thùng rác, xây dựng nguyên mẫu và đánh giá độ chính xác trên dữ liệu kiểm thử. Mục tiêu hỗ trợ tối ưu tuyến thu gom rác thông qua thử nghiệm thực tế."
+      }
+    },
+    {
+      "sourceId": "source-7",
+      "split": "calibration",
+      "label": "different",
+      "positive": false,
+      "left": {
+        "id": "source-7",
+        "title": "Xây dựng hệ thống tối ưu tuyến thu gom rác tại địa phương",
+        "text": "Bài toán tối ưu tuyến thu gom rác được nghiên cứu bằng đồ thị đường phố và thùng rác. Thu thập đồ thị đường phố và thùng rác để thiết kế giải pháp tối ưu tuyến thu gom rác. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với đồ thị đường phố và thùng rác."
+      },
+      "right": {
+        "title": "Xây dựng hệ thống phân tích cảm xúc bình luận tại địa phương",
+        "text": "Bài toán phân tích cảm xúc bình luận được nghiên cứu bằng văn bản tiếng Việt và nhãn cảm xúc. Thu thập văn bản tiếng Việt và nhãn cảm xúc để thiết kế giải pháp phân tích cảm xúc bình luận. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với văn bản tiếng Việt và nhãn cảm xúc."
+      }
+    },
+    {
+      "sourceId": "source-8",
+      "split": "calibration",
+      "label": "duplicate",
+      "positive": true,
+      "left": {
+        "id": "source-8",
+        "title": "Xây dựng hệ thống phân tích cảm xúc bình luận tại địa phương",
+        "text": "Bài toán phân tích cảm xúc bình luận được nghiên cứu bằng văn bản tiếng Việt và nhãn cảm xúc. Thu thập văn bản tiếng Việt và nhãn cảm xúc để thiết kế giải pháp phân tích cảm xúc bình luận. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với văn bản tiếng Việt và nhãn cảm xúc."
+      },
+      "right": {
+        "title": "  XÂY DỰNG HỆ THỐNG PHÂN TÍCH CẢM XÚC BÌNH LUẬN TẠI ĐỊA PHƯƠNG!  ",
+        "text": "Bài toán phân tích cảm xúc bình luận được nghiên cứu bằng văn bản tiếng Việt và nhãn cảm xúc. Thu thập văn bản tiếng Việt và nhãn cảm xúc để thiết kế giải pháp phân tích cảm xúc bình luận. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với văn bản tiếng Việt và nhãn cảm xúc."
+      }
+    },
+    {
+      "sourceId": "source-8",
+      "split": "calibration",
+      "label": "near",
+      "positive": true,
+      "left": {
+        "id": "source-8",
+        "title": "Xây dựng hệ thống phân tích cảm xúc bình luận tại địa phương",
+        "text": "Bài toán phân tích cảm xúc bình luận được nghiên cứu bằng văn bản tiếng Việt và nhãn cảm xúc. Thu thập văn bản tiếng Việt và nhãn cảm xúc để thiết kế giải pháp phân tích cảm xúc bình luận. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với văn bản tiếng Việt và nhãn cảm xúc."
+      },
+      "right": {
+        "title": "Nghiên cứu giải pháp phân tích cảm xúc bình luận ứng dụng trong thực tiễn",
+        "text": "Đề xuất giải pháp phân tích cảm xúc bình luận dựa trên văn bản tiếng Việt và nhãn cảm xúc. Phân tích và thu thập văn bản tiếng Việt và nhãn cảm xúc, xây dựng nguyên mẫu và đánh giá độ chính xác trên dữ liệu kiểm thử. Mục tiêu hỗ trợ phân tích cảm xúc bình luận thông qua thử nghiệm thực tế."
+      }
+    },
+    {
+      "sourceId": "source-8",
+      "split": "calibration",
+      "label": "different",
+      "positive": false,
+      "left": {
+        "id": "source-8",
+        "title": "Xây dựng hệ thống phân tích cảm xúc bình luận tại địa phương",
+        "text": "Bài toán phân tích cảm xúc bình luận được nghiên cứu bằng văn bản tiếng Việt và nhãn cảm xúc. Thu thập văn bản tiếng Việt và nhãn cảm xúc để thiết kế giải pháp phân tích cảm xúc bình luận. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với văn bản tiếng Việt và nhãn cảm xúc."
+      },
+      "right": {
+        "title": "Xây dựng hệ thống giám sát năng lượng mặt trời tại địa phương",
+        "text": "Bài toán giám sát năng lượng mặt trời được nghiên cứu bằng điện áp tấm pin và thời tiết. Thu thập điện áp tấm pin và thời tiết để thiết kế giải pháp giám sát năng lượng mặt trời. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với điện áp tấm pin và thời tiết."
+      }
+    },
+    {
+      "sourceId": "source-9",
+      "split": "calibration",
+      "label": "duplicate",
+      "positive": true,
+      "left": {
+        "id": "source-9",
+        "title": "Xây dựng hệ thống giám sát năng lượng mặt trời tại địa phương",
+        "text": "Bài toán giám sát năng lượng mặt trời được nghiên cứu bằng điện áp tấm pin và thời tiết. Thu thập điện áp tấm pin và thời tiết để thiết kế giải pháp giám sát năng lượng mặt trời. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với điện áp tấm pin và thời tiết."
+      },
+      "right": {
+        "title": "  XÂY DỰNG HỆ THỐNG GIÁM SÁT NĂNG LƯỢNG MẶT TRỜI TẠI ĐỊA PHƯƠNG!  ",
+        "text": "Bài toán giám sát năng lượng mặt trời được nghiên cứu bằng điện áp tấm pin và thời tiết. Thu thập điện áp tấm pin và thời tiết để thiết kế giải pháp giám sát năng lượng mặt trời. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với điện áp tấm pin và thời tiết."
+      }
+    },
+    {
+      "sourceId": "source-9",
+      "split": "calibration",
+      "label": "near",
+      "positive": true,
+      "left": {
+        "id": "source-9",
+        "title": "Xây dựng hệ thống giám sát năng lượng mặt trời tại địa phương",
+        "text": "Bài toán giám sát năng lượng mặt trời được nghiên cứu bằng điện áp tấm pin và thời tiết. Thu thập điện áp tấm pin và thời tiết để thiết kế giải pháp giám sát năng lượng mặt trời. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với điện áp tấm pin và thời tiết."
+      },
+      "right": {
+        "title": "Nghiên cứu giải pháp giám sát năng lượng mặt trời ứng dụng trong thực tiễn",
+        "text": "Đề xuất giải pháp giám sát năng lượng mặt trời dựa trên điện áp tấm pin và thời tiết. Phân tích và thu thập điện áp tấm pin và thời tiết, xây dựng nguyên mẫu và đánh giá độ chính xác trên dữ liệu kiểm thử. Mục tiêu hỗ trợ giám sát năng lượng mặt trời thông qua thử nghiệm thực tế."
+      }
+    },
+    {
+      "sourceId": "source-9",
+      "split": "calibration",
+      "label": "different",
+      "positive": false,
+      "left": {
+        "id": "source-9",
+        "title": "Xây dựng hệ thống giám sát năng lượng mặt trời tại địa phương",
+        "text": "Bài toán giám sát năng lượng mặt trời được nghiên cứu bằng điện áp tấm pin và thời tiết. Thu thập điện áp tấm pin và thời tiết để thiết kế giải pháp giám sát năng lượng mặt trời. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với điện áp tấm pin và thời tiết."
+      },
+      "right": {
+        "title": "Xây dựng hệ thống đăng ký câu lạc bộ sinh viên tại địa phương",
+        "text": "Bài toán đăng ký câu lạc bộ sinh viên được nghiên cứu bằng thành viên và sự kiện ngoại khóa. Thu thập thành viên và sự kiện ngoại khóa để thiết kế giải pháp đăng ký câu lạc bộ sinh viên. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với thành viên và sự kiện ngoại khóa."
+      }
+    },
+    {
+      "sourceId": "source-10",
+      "split": "calibration",
+      "label": "duplicate",
+      "positive": true,
+      "left": {
+        "id": "source-10",
+        "title": "Xây dựng hệ thống đăng ký câu lạc bộ sinh viên tại địa phương",
+        "text": "Bài toán đăng ký câu lạc bộ sinh viên được nghiên cứu bằng thành viên và sự kiện ngoại khóa. Thu thập thành viên và sự kiện ngoại khóa để thiết kế giải pháp đăng ký câu lạc bộ sinh viên. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với thành viên và sự kiện ngoại khóa."
+      },
+      "right": {
+        "title": "  XÂY DỰNG HỆ THỐNG ĐĂNG KÝ CÂU LẠC BỘ SINH VIÊN TẠI ĐỊA PHƯƠNG!  ",
+        "text": "Bài toán đăng ký câu lạc bộ sinh viên được nghiên cứu bằng thành viên và sự kiện ngoại khóa. Thu thập thành viên và sự kiện ngoại khóa để thiết kế giải pháp đăng ký câu lạc bộ sinh viên. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với thành viên và sự kiện ngoại khóa."
+      }
+    },
+    {
+      "sourceId": "source-10",
+      "split": "calibration",
+      "label": "near",
+      "positive": true,
+      "left": {
+        "id": "source-10",
+        "title": "Xây dựng hệ thống đăng ký câu lạc bộ sinh viên tại địa phương",
+        "text": "Bài toán đăng ký câu lạc bộ sinh viên được nghiên cứu bằng thành viên và sự kiện ngoại khóa. Thu thập thành viên và sự kiện ngoại khóa để thiết kế giải pháp đăng ký câu lạc bộ sinh viên. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với thành viên và sự kiện ngoại khóa."
+      },
+      "right": {
+        "title": "Nghiên cứu giải pháp đăng ký câu lạc bộ sinh viên ứng dụng trong thực tiễn",
+        "text": "Đề xuất giải pháp đăng ký câu lạc bộ sinh viên dựa trên thành viên và sự kiện ngoại khóa. Phân tích và thu thập thành viên và sự kiện ngoại khóa, xây dựng nguyên mẫu và đánh giá độ chính xác trên dữ liệu kiểm thử. Mục tiêu hỗ trợ đăng ký câu lạc bộ sinh viên thông qua thử nghiệm thực tế."
+      }
+    },
+    {
+      "sourceId": "source-10",
+      "split": "calibration",
+      "label": "different",
+      "positive": false,
+      "left": {
+        "id": "source-10",
+        "title": "Xây dựng hệ thống đăng ký câu lạc bộ sinh viên tại địa phương",
+        "text": "Bài toán đăng ký câu lạc bộ sinh viên được nghiên cứu bằng thành viên và sự kiện ngoại khóa. Thu thập thành viên và sự kiện ngoại khóa để thiết kế giải pháp đăng ký câu lạc bộ sinh viên. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với thành viên và sự kiện ngoại khóa."
+      },
+      "right": {
+        "title": "Xây dựng hệ thống quản lý mượn thiết bị tại địa phương",
+        "text": "Bài toán quản lý mượn thiết bị được nghiên cứu bằng phiếu mượn và tồn kho. Thu thập phiếu mượn và tồn kho để thiết kế giải pháp quản lý mượn thiết bị. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với phiếu mượn và tồn kho."
+      }
+    },
+    {
+      "sourceId": "source-11",
+      "split": "calibration",
+      "label": "duplicate",
+      "positive": true,
+      "left": {
+        "id": "source-11",
+        "title": "Xây dựng hệ thống quản lý mượn thiết bị tại địa phương",
+        "text": "Bài toán quản lý mượn thiết bị được nghiên cứu bằng phiếu mượn và tồn kho. Thu thập phiếu mượn và tồn kho để thiết kế giải pháp quản lý mượn thiết bị. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với phiếu mượn và tồn kho."
+      },
+      "right": {
+        "title": "  XÂY DỰNG HỆ THỐNG QUẢN LÝ MƯỢN THIẾT BỊ TẠI ĐỊA PHƯƠNG!  ",
+        "text": "Bài toán quản lý mượn thiết bị được nghiên cứu bằng phiếu mượn và tồn kho. Thu thập phiếu mượn và tồn kho để thiết kế giải pháp quản lý mượn thiết bị. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với phiếu mượn và tồn kho."
+      }
+    },
+    {
+      "sourceId": "source-11",
+      "split": "calibration",
+      "label": "near",
+      "positive": true,
+      "left": {
+        "id": "source-11",
+        "title": "Xây dựng hệ thống quản lý mượn thiết bị tại địa phương",
+        "text": "Bài toán quản lý mượn thiết bị được nghiên cứu bằng phiếu mượn và tồn kho. Thu thập phiếu mượn và tồn kho để thiết kế giải pháp quản lý mượn thiết bị. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với phiếu mượn và tồn kho."
+      },
+      "right": {
+        "title": "Nghiên cứu giải pháp quản lý mượn thiết bị ứng dụng trong thực tiễn",
+        "text": "Đề xuất giải pháp quản lý mượn thiết bị dựa trên phiếu mượn và tồn kho. Phân tích và thu thập phiếu mượn và tồn kho, xây dựng nguyên mẫu và đánh giá độ chính xác trên dữ liệu kiểm thử. Mục tiêu hỗ trợ quản lý mượn thiết bị thông qua thử nghiệm thực tế."
+      }
+    },
+    {
+      "sourceId": "source-11",
+      "split": "calibration",
+      "label": "different",
+      "positive": false,
+      "left": {
+        "id": "source-11",
+        "title": "Xây dựng hệ thống quản lý mượn thiết bị tại địa phương",
+        "text": "Bài toán quản lý mượn thiết bị được nghiên cứu bằng phiếu mượn và tồn kho. Thu thập phiếu mượn và tồn kho để thiết kế giải pháp quản lý mượn thiết bị. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với phiếu mượn và tồn kho."
+      },
+      "right": {
+        "title": "Xây dựng hệ thống phát hiện gian lận giao dịch tại địa phương",
+        "text": "Bài toán phát hiện gian lận giao dịch được nghiên cứu bằng dữ liệu giao dịch và luật bất thường. Thu thập dữ liệu giao dịch và luật bất thường để thiết kế giải pháp phát hiện gian lận giao dịch. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với dữ liệu giao dịch và luật bất thường."
+      }
+    },
+    {
+      "sourceId": "source-12",
+      "split": "calibration",
+      "label": "duplicate",
+      "positive": true,
+      "left": {
+        "id": "source-12",
+        "title": "Xây dựng hệ thống phát hiện gian lận giao dịch tại địa phương",
+        "text": "Bài toán phát hiện gian lận giao dịch được nghiên cứu bằng dữ liệu giao dịch và luật bất thường. Thu thập dữ liệu giao dịch và luật bất thường để thiết kế giải pháp phát hiện gian lận giao dịch. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với dữ liệu giao dịch và luật bất thường."
+      },
+      "right": {
+        "title": "  XÂY DỰNG HỆ THỐNG PHÁT HIỆN GIAN LẬN GIAO DỊCH TẠI ĐỊA PHƯƠNG!  ",
+        "text": "Bài toán phát hiện gian lận giao dịch được nghiên cứu bằng dữ liệu giao dịch và luật bất thường. Thu thập dữ liệu giao dịch và luật bất thường để thiết kế giải pháp phát hiện gian lận giao dịch. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với dữ liệu giao dịch và luật bất thường."
+      }
+    },
+    {
+      "sourceId": "source-12",
+      "split": "calibration",
+      "label": "near",
+      "positive": true,
+      "left": {
+        "id": "source-12",
+        "title": "Xây dựng hệ thống phát hiện gian lận giao dịch tại địa phương",
+        "text": "Bài toán phát hiện gian lận giao dịch được nghiên cứu bằng dữ liệu giao dịch và luật bất thường. Thu thập dữ liệu giao dịch và luật bất thường để thiết kế giải pháp phát hiện gian lận giao dịch. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với dữ liệu giao dịch và luật bất thường."
+      },
+      "right": {
+        "title": "Nghiên cứu giải pháp phát hiện gian lận giao dịch ứng dụng trong thực tiễn",
+        "text": "Đề xuất giải pháp phát hiện gian lận giao dịch dựa trên dữ liệu giao dịch và luật bất thường. Phân tích và thu thập dữ liệu giao dịch và luật bất thường, xây dựng nguyên mẫu và đánh giá độ chính xác trên dữ liệu kiểm thử. Mục tiêu hỗ trợ phát hiện gian lận giao dịch thông qua thử nghiệm thực tế."
+      }
+    },
+    {
+      "sourceId": "source-12",
+      "split": "calibration",
+      "label": "different",
+      "positive": false,
+      "left": {
+        "id": "source-12",
+        "title": "Xây dựng hệ thống phát hiện gian lận giao dịch tại địa phương",
+        "text": "Bài toán phát hiện gian lận giao dịch được nghiên cứu bằng dữ liệu giao dịch và luật bất thường. Thu thập dữ liệu giao dịch và luật bất thường để thiết kế giải pháp phát hiện gian lận giao dịch. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với dữ liệu giao dịch và luật bất thường."
+      },
+      "right": {
+        "title": "Xây dựng hệ thống phân loại bệnh trên lá cây tại địa phương",
+        "text": "Bài toán phân loại bệnh trên lá cây được nghiên cứu bằng ảnh lá và mạng tích chập. Thu thập ảnh lá và mạng tích chập để thiết kế giải pháp phân loại bệnh trên lá cây. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với ảnh lá và mạng tích chập."
+      }
+    },
+    {
+      "sourceId": "source-13",
+      "split": "test",
+      "label": "duplicate",
+      "positive": true,
+      "left": {
+        "id": "source-13",
+        "title": "Xây dựng hệ thống nhận dạng tiếng nói vùng miền tại địa phương",
+        "text": "Bài toán nhận dạng tiếng nói vùng miền được nghiên cứu bằng tín hiệu âm thanh và phiên âm. Thu thập tín hiệu âm thanh và phiên âm để thiết kế giải pháp nhận dạng tiếng nói vùng miền. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với tín hiệu âm thanh và phiên âm."
+      },
+      "right": {
+        "title": "  XÂY DỰNG HỆ THỐNG NHẬN DẠNG TIẾNG NÓI VÙNG MIỀN TẠI ĐỊA PHƯƠNG!  ",
+        "text": "Bài toán nhận dạng tiếng nói vùng miền được nghiên cứu bằng tín hiệu âm thanh và phiên âm. Thu thập tín hiệu âm thanh và phiên âm để thiết kế giải pháp nhận dạng tiếng nói vùng miền. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với tín hiệu âm thanh và phiên âm."
+      }
+    },
+    {
+      "sourceId": "source-13",
+      "split": "test",
+      "label": "near",
+      "positive": true,
+      "left": {
+        "id": "source-13",
+        "title": "Xây dựng hệ thống nhận dạng tiếng nói vùng miền tại địa phương",
+        "text": "Bài toán nhận dạng tiếng nói vùng miền được nghiên cứu bằng tín hiệu âm thanh và phiên âm. Thu thập tín hiệu âm thanh và phiên âm để thiết kế giải pháp nhận dạng tiếng nói vùng miền. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với tín hiệu âm thanh và phiên âm."
+      },
+      "right": {
+        "title": "Nghiên cứu giải pháp nhận dạng tiếng nói vùng miền ứng dụng trong thực tiễn",
+        "text": "Đề xuất giải pháp nhận dạng tiếng nói vùng miền dựa trên tín hiệu âm thanh và phiên âm. Phân tích và thu thập tín hiệu âm thanh và phiên âm, xây dựng nguyên mẫu và đánh giá độ chính xác trên dữ liệu kiểm thử. Mục tiêu hỗ trợ nhận dạng tiếng nói vùng miền thông qua thử nghiệm thực tế."
+      }
+    },
+    {
+      "sourceId": "source-13",
+      "split": "test",
+      "label": "different",
+      "positive": false,
+      "left": {
+        "id": "source-13",
+        "title": "Xây dựng hệ thống nhận dạng tiếng nói vùng miền tại địa phương",
+        "text": "Bài toán nhận dạng tiếng nói vùng miền được nghiên cứu bằng tín hiệu âm thanh và phiên âm. Thu thập tín hiệu âm thanh và phiên âm để thiết kế giải pháp nhận dạng tiếng nói vùng miền. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với tín hiệu âm thanh và phiên âm."
+      },
+      "right": {
+        "title": "Xây dựng hệ thống đo chất lượng giấc ngủ tại địa phương",
+        "text": "Bài toán đo chất lượng giấc ngủ được nghiên cứu bằng thiết bị đeo và nhịp tim. Thu thập thiết bị đeo và nhịp tim để thiết kế giải pháp đo chất lượng giấc ngủ. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với thiết bị đeo và nhịp tim."
+      }
+    },
+    {
+      "sourceId": "source-14",
+      "split": "test",
+      "label": "duplicate",
+      "positive": true,
+      "left": {
+        "id": "source-14",
+        "title": "Xây dựng hệ thống đo chất lượng giấc ngủ tại địa phương",
+        "text": "Bài toán đo chất lượng giấc ngủ được nghiên cứu bằng thiết bị đeo và nhịp tim. Thu thập thiết bị đeo và nhịp tim để thiết kế giải pháp đo chất lượng giấc ngủ. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với thiết bị đeo và nhịp tim."
+      },
+      "right": {
+        "title": "  XÂY DỰNG HỆ THỐNG ĐO CHẤT LƯỢNG GIẤC NGỦ TẠI ĐỊA PHƯƠNG!  ",
+        "text": "Bài toán đo chất lượng giấc ngủ được nghiên cứu bằng thiết bị đeo và nhịp tim. Thu thập thiết bị đeo và nhịp tim để thiết kế giải pháp đo chất lượng giấc ngủ. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với thiết bị đeo và nhịp tim."
+      }
+    },
+    {
+      "sourceId": "source-14",
+      "split": "test",
+      "label": "near",
+      "positive": true,
+      "left": {
+        "id": "source-14",
+        "title": "Xây dựng hệ thống đo chất lượng giấc ngủ tại địa phương",
+        "text": "Bài toán đo chất lượng giấc ngủ được nghiên cứu bằng thiết bị đeo và nhịp tim. Thu thập thiết bị đeo và nhịp tim để thiết kế giải pháp đo chất lượng giấc ngủ. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với thiết bị đeo và nhịp tim."
+      },
+      "right": {
+        "title": "Nghiên cứu giải pháp đo chất lượng giấc ngủ ứng dụng trong thực tiễn",
+        "text": "Đề xuất giải pháp đo chất lượng giấc ngủ dựa trên thiết bị đeo và nhịp tim. Phân tích và thu thập thiết bị đeo và nhịp tim, xây dựng nguyên mẫu và đánh giá độ chính xác trên dữ liệu kiểm thử. Mục tiêu hỗ trợ đo chất lượng giấc ngủ thông qua thử nghiệm thực tế."
+      }
+    },
+    {
+      "sourceId": "source-14",
+      "split": "test",
+      "label": "different",
+      "positive": false,
+      "left": {
+        "id": "source-14",
+        "title": "Xây dựng hệ thống đo chất lượng giấc ngủ tại địa phương",
+        "text": "Bài toán đo chất lượng giấc ngủ được nghiên cứu bằng thiết bị đeo và nhịp tim. Thu thập thiết bị đeo và nhịp tim để thiết kế giải pháp đo chất lượng giấc ngủ. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với thiết bị đeo và nhịp tim."
+      },
+      "right": {
+        "title": "Xây dựng hệ thống bảo tồn di sản văn hóa tại địa phương",
+        "text": "Bài toán bảo tồn di sản văn hóa được nghiên cứu bằng hiện vật và tư liệu lịch sử. Thu thập hiện vật và tư liệu lịch sử để thiết kế giải pháp bảo tồn di sản văn hóa. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với hiện vật và tư liệu lịch sử."
+      }
+    },
+    {
+      "sourceId": "source-15",
+      "split": "test",
+      "label": "duplicate",
+      "positive": true,
+      "left": {
+        "id": "source-15",
+        "title": "Xây dựng hệ thống bảo tồn di sản văn hóa tại địa phương",
+        "text": "Bài toán bảo tồn di sản văn hóa được nghiên cứu bằng hiện vật và tư liệu lịch sử. Thu thập hiện vật và tư liệu lịch sử để thiết kế giải pháp bảo tồn di sản văn hóa. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với hiện vật và tư liệu lịch sử."
+      },
+      "right": {
+        "title": "  XÂY DỰNG HỆ THỐNG BẢO TỒN DI SẢN VĂN HÓA TẠI ĐỊA PHƯƠNG!  ",
+        "text": "Bài toán bảo tồn di sản văn hóa được nghiên cứu bằng hiện vật và tư liệu lịch sử. Thu thập hiện vật và tư liệu lịch sử để thiết kế giải pháp bảo tồn di sản văn hóa. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với hiện vật và tư liệu lịch sử."
+      }
+    },
+    {
+      "sourceId": "source-15",
+      "split": "test",
+      "label": "near",
+      "positive": true,
+      "left": {
+        "id": "source-15",
+        "title": "Xây dựng hệ thống bảo tồn di sản văn hóa tại địa phương",
+        "text": "Bài toán bảo tồn di sản văn hóa được nghiên cứu bằng hiện vật và tư liệu lịch sử. Thu thập hiện vật và tư liệu lịch sử để thiết kế giải pháp bảo tồn di sản văn hóa. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với hiện vật và tư liệu lịch sử."
+      },
+      "right": {
+        "title": "Nghiên cứu giải pháp bảo tồn di sản văn hóa ứng dụng trong thực tiễn",
+        "text": "Đề xuất giải pháp bảo tồn di sản văn hóa dựa trên hiện vật và tư liệu lịch sử. Phân tích và thu thập hiện vật và tư liệu lịch sử, xây dựng nguyên mẫu và đánh giá độ chính xác trên dữ liệu kiểm thử. Mục tiêu hỗ trợ bảo tồn di sản văn hóa thông qua thử nghiệm thực tế."
+      }
+    },
+    {
+      "sourceId": "source-15",
+      "split": "test",
+      "label": "different",
+      "positive": false,
+      "left": {
+        "id": "source-15",
+        "title": "Xây dựng hệ thống bảo tồn di sản văn hóa tại địa phương",
+        "text": "Bài toán bảo tồn di sản văn hóa được nghiên cứu bằng hiện vật và tư liệu lịch sử. Thu thập hiện vật và tư liệu lịch sử để thiết kế giải pháp bảo tồn di sản văn hóa. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với hiện vật và tư liệu lịch sử."
+      },
+      "right": {
+        "title": "Xây dựng hệ thống đánh giá ô nhiễm tiếng ồn tại địa phương",
+        "text": "Bài toán đánh giá ô nhiễm tiếng ồn được nghiên cứu bằng cường độ âm và vị trí đo. Thu thập cường độ âm và vị trí đo để thiết kế giải pháp đánh giá ô nhiễm tiếng ồn. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với cường độ âm và vị trí đo."
+      }
+    },
+    {
+      "sourceId": "source-16",
+      "split": "test",
+      "label": "duplicate",
+      "positive": true,
+      "left": {
+        "id": "source-16",
+        "title": "Xây dựng hệ thống đánh giá ô nhiễm tiếng ồn tại địa phương",
+        "text": "Bài toán đánh giá ô nhiễm tiếng ồn được nghiên cứu bằng cường độ âm và vị trí đo. Thu thập cường độ âm và vị trí đo để thiết kế giải pháp đánh giá ô nhiễm tiếng ồn. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với cường độ âm và vị trí đo."
+      },
+      "right": {
+        "title": "  XÂY DỰNG HỆ THỐNG ĐÁNH GIÁ Ô NHIỄM TIẾNG ỒN TẠI ĐỊA PHƯƠNG!  ",
+        "text": "Bài toán đánh giá ô nhiễm tiếng ồn được nghiên cứu bằng cường độ âm và vị trí đo. Thu thập cường độ âm và vị trí đo để thiết kế giải pháp đánh giá ô nhiễm tiếng ồn. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với cường độ âm và vị trí đo."
+      }
+    },
+    {
+      "sourceId": "source-16",
+      "split": "test",
+      "label": "near",
+      "positive": true,
+      "left": {
+        "id": "source-16",
+        "title": "Xây dựng hệ thống đánh giá ô nhiễm tiếng ồn tại địa phương",
+        "text": "Bài toán đánh giá ô nhiễm tiếng ồn được nghiên cứu bằng cường độ âm và vị trí đo. Thu thập cường độ âm và vị trí đo để thiết kế giải pháp đánh giá ô nhiễm tiếng ồn. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với cường độ âm và vị trí đo."
+      },
+      "right": {
+        "title": "Nghiên cứu giải pháp đánh giá ô nhiễm tiếng ồn ứng dụng trong thực tiễn",
+        "text": "Đề xuất giải pháp đánh giá ô nhiễm tiếng ồn dựa trên cường độ âm và vị trí đo. Phân tích và thu thập cường độ âm và vị trí đo, xây dựng nguyên mẫu và đánh giá độ chính xác trên dữ liệu kiểm thử. Mục tiêu hỗ trợ đánh giá ô nhiễm tiếng ồn thông qua thử nghiệm thực tế."
+      }
+    },
+    {
+      "sourceId": "source-16",
+      "split": "test",
+      "label": "different",
+      "positive": false,
+      "left": {
+        "id": "source-16",
+        "title": "Xây dựng hệ thống đánh giá ô nhiễm tiếng ồn tại địa phương",
+        "text": "Bài toán đánh giá ô nhiễm tiếng ồn được nghiên cứu bằng cường độ âm và vị trí đo. Thu thập cường độ âm và vị trí đo để thiết kế giải pháp đánh giá ô nhiễm tiếng ồn. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với cường độ âm và vị trí đo."
+      },
+      "right": {
+        "title": "Xây dựng hệ thống tìm kiếm tài liệu pháp luật tại địa phương",
+        "text": "Bài toán tìm kiếm tài liệu pháp luật được nghiên cứu bằng văn bản luật và chỉ mục từ khóa. Thu thập văn bản luật và chỉ mục từ khóa để thiết kế giải pháp tìm kiếm tài liệu pháp luật. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với văn bản luật và chỉ mục từ khóa."
+      }
+    },
+    {
+      "sourceId": "source-17",
+      "split": "test",
+      "label": "duplicate",
+      "positive": true,
+      "left": {
+        "id": "source-17",
+        "title": "Xây dựng hệ thống tìm kiếm tài liệu pháp luật tại địa phương",
+        "text": "Bài toán tìm kiếm tài liệu pháp luật được nghiên cứu bằng văn bản luật và chỉ mục từ khóa. Thu thập văn bản luật và chỉ mục từ khóa để thiết kế giải pháp tìm kiếm tài liệu pháp luật. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với văn bản luật và chỉ mục từ khóa."
+      },
+      "right": {
+        "title": "  XÂY DỰNG HỆ THỐNG TÌM KIẾM TÀI LIỆU PHÁP LUẬT TẠI ĐỊA PHƯƠNG!  ",
+        "text": "Bài toán tìm kiếm tài liệu pháp luật được nghiên cứu bằng văn bản luật và chỉ mục từ khóa. Thu thập văn bản luật và chỉ mục từ khóa để thiết kế giải pháp tìm kiếm tài liệu pháp luật. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với văn bản luật và chỉ mục từ khóa."
+      }
+    },
+    {
+      "sourceId": "source-17",
+      "split": "test",
+      "label": "near",
+      "positive": true,
+      "left": {
+        "id": "source-17",
+        "title": "Xây dựng hệ thống tìm kiếm tài liệu pháp luật tại địa phương",
+        "text": "Bài toán tìm kiếm tài liệu pháp luật được nghiên cứu bằng văn bản luật và chỉ mục từ khóa. Thu thập văn bản luật và chỉ mục từ khóa để thiết kế giải pháp tìm kiếm tài liệu pháp luật. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với văn bản luật và chỉ mục từ khóa."
+      },
+      "right": {
+        "title": "Nghiên cứu giải pháp tìm kiếm tài liệu pháp luật ứng dụng trong thực tiễn",
+        "text": "Đề xuất giải pháp tìm kiếm tài liệu pháp luật dựa trên văn bản luật và chỉ mục từ khóa. Phân tích và thu thập văn bản luật và chỉ mục từ khóa, xây dựng nguyên mẫu và đánh giá độ chính xác trên dữ liệu kiểm thử. Mục tiêu hỗ trợ tìm kiếm tài liệu pháp luật thông qua thử nghiệm thực tế."
+      }
+    },
+    {
+      "sourceId": "source-17",
+      "split": "test",
+      "label": "different",
+      "positive": false,
+      "left": {
+        "id": "source-17",
+        "title": "Xây dựng hệ thống tìm kiếm tài liệu pháp luật tại địa phương",
+        "text": "Bài toán tìm kiếm tài liệu pháp luật được nghiên cứu bằng văn bản luật và chỉ mục từ khóa. Thu thập văn bản luật và chỉ mục từ khóa để thiết kế giải pháp tìm kiếm tài liệu pháp luật. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với văn bản luật và chỉ mục từ khóa."
+      },
+      "right": {
+        "title": "Xây dựng hệ thống quản lý hoạt động tình nguyện tại địa phương",
+        "text": "Bài toán quản lý hoạt động tình nguyện được nghiên cứu bằng chiến dịch và đăng ký tham gia. Thu thập chiến dịch và đăng ký tham gia để thiết kế giải pháp quản lý hoạt động tình nguyện. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với chiến dịch và đăng ký tham gia."
+      }
+    },
+    {
+      "sourceId": "source-18",
+      "split": "test",
+      "label": "duplicate",
+      "positive": true,
+      "left": {
+        "id": "source-18",
+        "title": "Xây dựng hệ thống quản lý hoạt động tình nguyện tại địa phương",
+        "text": "Bài toán quản lý hoạt động tình nguyện được nghiên cứu bằng chiến dịch và đăng ký tham gia. Thu thập chiến dịch và đăng ký tham gia để thiết kế giải pháp quản lý hoạt động tình nguyện. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với chiến dịch và đăng ký tham gia."
+      },
+      "right": {
+        "title": "  XÂY DỰNG HỆ THỐNG QUẢN LÝ HOẠT ĐỘNG TÌNH NGUYỆN TẠI ĐỊA PHƯƠNG!  ",
+        "text": "Bài toán quản lý hoạt động tình nguyện được nghiên cứu bằng chiến dịch và đăng ký tham gia. Thu thập chiến dịch và đăng ký tham gia để thiết kế giải pháp quản lý hoạt động tình nguyện. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với chiến dịch và đăng ký tham gia."
+      }
+    },
+    {
+      "sourceId": "source-18",
+      "split": "test",
+      "label": "near",
+      "positive": true,
+      "left": {
+        "id": "source-18",
+        "title": "Xây dựng hệ thống quản lý hoạt động tình nguyện tại địa phương",
+        "text": "Bài toán quản lý hoạt động tình nguyện được nghiên cứu bằng chiến dịch và đăng ký tham gia. Thu thập chiến dịch và đăng ký tham gia để thiết kế giải pháp quản lý hoạt động tình nguyện. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với chiến dịch và đăng ký tham gia."
+      },
+      "right": {
+        "title": "Nghiên cứu giải pháp quản lý hoạt động tình nguyện ứng dụng trong thực tiễn",
+        "text": "Đề xuất giải pháp quản lý hoạt động tình nguyện dựa trên chiến dịch và đăng ký tham gia. Phân tích và thu thập chiến dịch và đăng ký tham gia, xây dựng nguyên mẫu và đánh giá độ chính xác trên dữ liệu kiểm thử. Mục tiêu hỗ trợ quản lý hoạt động tình nguyện thông qua thử nghiệm thực tế."
+      }
+    },
+    {
+      "sourceId": "source-18",
+      "split": "test",
+      "label": "different",
+      "positive": false,
+      "left": {
+        "id": "source-18",
+        "title": "Xây dựng hệ thống quản lý hoạt động tình nguyện tại địa phương",
+        "text": "Bài toán quản lý hoạt động tình nguyện được nghiên cứu bằng chiến dịch và đăng ký tham gia. Thu thập chiến dịch và đăng ký tham gia để thiết kế giải pháp quản lý hoạt động tình nguyện. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với chiến dịch và đăng ký tham gia."
+      },
+      "right": {
+        "title": "Xây dựng hệ thống dự đoán nhu cầu xe buýt tại địa phương",
+        "text": "Bài toán dự đoán nhu cầu xe buýt được nghiên cứu bằng lưu lượng hành khách và giờ cao điểm. Thu thập lưu lượng hành khách và giờ cao điểm để thiết kế giải pháp dự đoán nhu cầu xe buýt. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với lưu lượng hành khách và giờ cao điểm."
+      }
+    },
+    {
+      "sourceId": "source-19",
+      "split": "test",
+      "label": "duplicate",
+      "positive": true,
+      "left": {
+        "id": "source-19",
+        "title": "Xây dựng hệ thống dự đoán nhu cầu xe buýt tại địa phương",
+        "text": "Bài toán dự đoán nhu cầu xe buýt được nghiên cứu bằng lưu lượng hành khách và giờ cao điểm. Thu thập lưu lượng hành khách và giờ cao điểm để thiết kế giải pháp dự đoán nhu cầu xe buýt. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với lưu lượng hành khách và giờ cao điểm."
+      },
+      "right": {
+        "title": "  XÂY DỰNG HỆ THỐNG DỰ ĐOÁN NHU CẦU XE BUÝT TẠI ĐỊA PHƯƠNG!  ",
+        "text": "Bài toán dự đoán nhu cầu xe buýt được nghiên cứu bằng lưu lượng hành khách và giờ cao điểm. Thu thập lưu lượng hành khách và giờ cao điểm để thiết kế giải pháp dự đoán nhu cầu xe buýt. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với lưu lượng hành khách và giờ cao điểm."
+      }
+    },
+    {
+      "sourceId": "source-19",
+      "split": "test",
+      "label": "near",
+      "positive": true,
+      "left": {
+        "id": "source-19",
+        "title": "Xây dựng hệ thống dự đoán nhu cầu xe buýt tại địa phương",
+        "text": "Bài toán dự đoán nhu cầu xe buýt được nghiên cứu bằng lưu lượng hành khách và giờ cao điểm. Thu thập lưu lượng hành khách và giờ cao điểm để thiết kế giải pháp dự đoán nhu cầu xe buýt. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với lưu lượng hành khách và giờ cao điểm."
+      },
+      "right": {
+        "title": "Nghiên cứu giải pháp dự đoán nhu cầu xe buýt ứng dụng trong thực tiễn",
+        "text": "Đề xuất giải pháp dự đoán nhu cầu xe buýt dựa trên lưu lượng hành khách và giờ cao điểm. Phân tích và thu thập lưu lượng hành khách và giờ cao điểm, xây dựng nguyên mẫu và đánh giá độ chính xác trên dữ liệu kiểm thử. Mục tiêu hỗ trợ dự đoán nhu cầu xe buýt thông qua thử nghiệm thực tế."
+      }
+    },
+    {
+      "sourceId": "source-19",
+      "split": "test",
+      "label": "different",
+      "positive": false,
+      "left": {
+        "id": "source-19",
+        "title": "Xây dựng hệ thống dự đoán nhu cầu xe buýt tại địa phương",
+        "text": "Bài toán dự đoán nhu cầu xe buýt được nghiên cứu bằng lưu lượng hành khách và giờ cao điểm. Thu thập lưu lượng hành khách và giờ cao điểm để thiết kế giải pháp dự đoán nhu cầu xe buýt. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với lưu lượng hành khách và giờ cao điểm."
+      },
+      "right": {
+        "title": "Xây dựng hệ thống nhận dạng tiếng nói vùng miền tại địa phương",
+        "text": "Bài toán nhận dạng tiếng nói vùng miền được nghiên cứu bằng tín hiệu âm thanh và phiên âm. Thu thập tín hiệu âm thanh và phiên âm để thiết kế giải pháp nhận dạng tiếng nói vùng miền. Mục tiêu đánh giá độ chính xác và tính khả thi thông qua thử nghiệm có kiểm soát với tín hiệu âm thanh và phiên âm."
+      }
+    }
+  ]
+}

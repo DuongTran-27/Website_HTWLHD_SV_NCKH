@@ -1,0 +1,10 @@
+node_modules
+.local
+.npm-cache
+app/client/dist
+backups
+test-results
+playwright-report
+coverage
+app/docs/*.json
+app/tests/fixtures/*.json

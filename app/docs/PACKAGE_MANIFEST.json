@@ -1,0 +1,14 @@
+{
+  "archive": "deliverables/research-hub-source-2026-10-22.zip",
+  "entries": 113,
+  "sizeBytes": 1456785,
+  "sha256": "a957f46bbc8c17ab9eb8a6923e772c10575e1c82640214223b4e692d3bce3f90",
+  "excludes": [
+    ".env",
+    "node_modules",
+    ".local",
+    "backups",
+    "dist",
+    "test-results"
+  ]
+}

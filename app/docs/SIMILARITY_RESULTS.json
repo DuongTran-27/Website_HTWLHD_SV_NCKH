@@ -1,0 +1,37 @@
+{
+  "algorithmVersion": "tfidf-uni-bi-cosine-v1",
+  "titleThreshold": 0.95,
+  "contentThreshold": 0.85,
+  "calibrationHash": "849ac129c05e8d07a232f9a5bc2f3b6820f873d3aa071b292ffb42a49b3ffc96",
+  "datasetHash": "e5726448b1778eea3bb7babd6f3f387d184a5e3212072f60ede7851ff01107f8",
+  "calibratedAt": "2026-10-22T08:42:54.919Z",
+  "sourceSplit": "13 source groups calibration (39 pairs), 7 disjoint source groups test (21 pairs)",
+  "calibration": {
+    "tp": 26,
+    "tn": 13,
+    "fp": 0,
+    "fn": 0,
+    "precision": 1,
+    "recall": 1,
+    "falsePositiveRate": 0,
+    "errors": []
+  },
+  "test": {
+    "tp": 14,
+    "tn": 7,
+    "fp": 0,
+    "fn": 0,
+    "precision": 1,
+    "recall": 1,
+    "falsePositiveRate": 0,
+    "errors": []
+  },
+  "pairs": 60,
+  "labels": {
+    "duplicate": 20,
+    "near": 20,
+    "different": 20
+  },
+  "elapsedMs": 170.51479999999998,
+  "limitation": "Synthetic labels assigned by construction; these metrics only establish engineering behavior. Academic quality needs independently labeled real proposals."
+}

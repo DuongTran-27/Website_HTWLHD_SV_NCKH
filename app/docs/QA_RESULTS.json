@@ -1,0 +1,127 @@
+{
+  "at": "2026-10-22T12:26:06.261Z",
+  "sourceVersion": "sha256:ce5077f5efc790bda0dca1392841666e596e6ef4107ba9f8ea7e5f3d0f5aff1f",
+  "gitCommit": null,
+  "node": "v24.12.0",
+  "checks": [
+    {
+      "name": "OpenAPI",
+      "exitCode": 0,
+      "elapsedMs": 748.3797999999999
+    },
+    {
+      "name": "ESLint",
+      "exitCode": 0,
+      "elapsedMs": 1227.6279999999997
+    },
+    {
+      "name": "Vite production build",
+      "exitCode": 0,
+      "elapsedMs": 4601.8015
+    },
+    {
+      "name": "npm audit",
+      "exitCode": 0,
+      "vulnerabilities": {
+        "info": 0,
+        "low": 0,
+        "moderate": 0,
+        "high": 0,
+        "critical": 0,
+        "total": 0
+      }
+    }
+  ],
+  "unit": {
+    "total": 51,
+    "passed": 51,
+    "failed": 0
+  },
+  "browser": {
+    "startTime": "2026-10-22T12:24:35.798Z",
+    "duration": 17975.457000000002,
+    "expected": 8,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "database": {
+    "tables": 34,
+    "names": [
+      "attachments",
+      "audit_logs",
+      "classes",
+      "evaluations",
+      "faculties",
+      "idempotency_records",
+      "majors",
+      "management_scopes",
+      "milestones",
+      "notifications",
+      "progress_updates",
+      "refresh_sessions",
+      "research_fields",
+      "research_periods",
+      "reviews",
+      "similarity_checks",
+      "similarity_corpora",
+      "similarity_matches",
+      "submission_files",
+      "submissions",
+      "supervision_requests",
+      "supervisor_assignments",
+      "team_access_grants",
+      "team_invitations",
+      "team_members",
+      "teams",
+      "topic_cancellation_requests",
+      "topic_change_requests",
+      "topic_decisions",
+      "topic_revision_files",
+      "topic_revisions",
+      "topics",
+      "user_roles",
+      "users"
+    ],
+    "migrationFiles": 5
+  },
+  "apiOperations": 105,
+  "externalVerification": {
+    "at": "2026-10-22T09:33:46.376Z",
+    "status": "blocked",
+    "missing": [
+      "CLOUDINARY_CLOUD_NAME",
+      "CLOUDINARY_API_KEY",
+      "CLOUDINARY_API_SECRET"
+    ],
+    "checks": {
+      "upload20MB": "not_run",
+      "privatePdfDownload": "not_run",
+      "expiresAfter5Minutes": "not_run",
+      "publicImage": "not_run"
+    },
+    "notes": [
+      "Configure the missing variables in .env. Never send secrets in chat."
+    ]
+  },
+  "restore": {
+    "at": "2026-10-22T12:14:42.009Z",
+    "databaseBackupRestore": {
+      "targetDatabase": "nckh_verify_1792671281411_restore",
+      "restoredFiles": 0,
+      "restoredAvatars": 0,
+      "counts": {
+        "topics": 7,
+        "revisions": 6,
+        "attachments": 0
+      },
+      "complete": true
+    },
+    "limitation": "Local demo currently has no real Cloudinary documents. This verifies PostgreSQL restore only. Full private document content restore awaits Cloudinary credentials."
+  },
+  "limitations": [
+    "Cloudinary live 20 MB/download expiry/content restore not verified without credentials.",
+    "Vercel/Render/Supabase deployment not performed.",
+    "Similarity labels are synthetic; academic accuracy remains unverified."
+  ]
+}

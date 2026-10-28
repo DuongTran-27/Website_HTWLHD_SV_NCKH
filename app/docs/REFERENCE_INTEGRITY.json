@@ -1,0 +1,43 @@
+{
+  "at": "2026-10-22T12:25:54.042Z",
+  "reference": "Original project requirements and 2026-10-21 deliverables (read-only comparison)",
+  "checked": [
+    {
+      "file": "00_DOC_TRUOC.md",
+      "unchanged": true
+    },
+    {
+      "file": "01_TONG_QUAN_VA_YEU_CAU.md",
+      "unchanged": true
+    },
+    {
+      "file": "02_TAC_NHAN_QUYEN_VA_LUONG.md",
+      "unchanged": true
+    },
+    {
+      "file": "03_THIET_KE_DU_LIEU.md",
+      "unchanged": true
+    },
+    {
+      "file": "04_DAC_TA_API.md",
+      "unchanged": true
+    },
+    {
+      "file": "05_GIAO_DIEN_KIEM_THU_TRIEN_KHAI.md",
+      "unchanged": true
+    },
+    {
+      "file": "06_PHIEU_KIEM_TRA_VA_CHOT.md",
+      "unchanged": true
+    },
+    {
+      "file": "HO_SO_TONG_HOP.md",
+      "unchanged": true
+    },
+    {
+      "file": "PROJECT_REQUIREMENTS_SNAPSHOT.md",
+      "unchanged": true
+    }
+  ],
+  "allUnchanged": true
+}

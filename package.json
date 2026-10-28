@@ -1,0 +1,62 @@
+{
+  "name": "student-research-management",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "engines": {
+    "node": ">=24.12.0 <25"
+  },
+  "workspaces": [
+    "app/client",
+    "app/server"
+  ],
+  "overrides": {
+    "deepmerge-ts": "8.0.0"
+  },
+  "scripts": {
+    "dev": "concurrently -k -n api,web \"npm run dev -w app/server\" \"npm run dev -w app/client\"",
+    "build": "npm run build -w app/client",
+    "start": "npm start -w app/server",
+    "db:generate": "prisma generate --schema app/server/prisma/schema.prisma",
+    "db:migrate": "node app/scripts/prisma.js migrate deploy",
+    "db:seed": "node --env-file=.env app/server/prisma/seed.js",
+    "db:start": "powershell -NoProfile -ExecutionPolicy Bypass -File app/scripts/postgres.ps1 start",
+    "db:stop": "powershell -NoProfile -ExecutionPolicy Bypass -File app/scripts/postgres.ps1 stop",
+    "setup:local": "node app/scripts/setup-local.js",
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "lint": "eslint .",
+    "similarity:evaluate": "node --env-file=.env app/scripts/evaluate-similarity.js",
+    "benchmark": "node --env-file=.env app/scripts/benchmark.js",
+    "jobs": "node --env-file=.env app/server/src/jobs.js",
+    "backup": "node --env-file=.env app/scripts/backup.js",
+    "restore": "node --env-file=.env app/scripts/restore.js",
+    "docs:api": "node app/scripts/openapi.js",
+    "seed:cloud": "node --env-file=.env app/scripts/seed-cloud.js",
+    "verify:cloudinary": "node --env-file=.env app/scripts/verify-cloudinary.js",
+    "verify:restore": "node --env-file=.env app/scripts/verify-restore.js",
+    "similarity:publish": "node --env-file=.env app/scripts/publish-corpus.js",
+    "daily": "node --env-file=.env app/scripts/daily.js",
+    "format": "prettier --write \"app/**/*.{js,jsx,css,json,md}\" \"*.{js,json,yaml}\" README.md",
+    "format:check": "prettier --check \"app/**/*.{js,jsx,css,json,md}\" \"*.{js,json,yaml}\" README.md",
+    "verify:delivery": "node --env-file=.env app/scripts/verify-delivery.js",
+    "package:source": "node app/scripts/package-source.js"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "@playwright/test": "1.64.1",
+    "@tailwindcss/vite": "4.1.17",
+    "@vitejs/plugin-react": "5.1.1",
+    "concurrently": "10.0.6",
+    "eslint": "10.13.0",
+    "eslint-plugin-react-hooks": "7.1.1",
+    "globals": "17.13.0",
+    "pg": "8.23.1",
+    "prettier": "3.6.2",
+    "prisma": "6.19.3",
+    "supertest": "7.3.1",
+    "tailwindcss": "4.1.17",
+    "vite": "7.3.7",
+    "vitest": "4.1.12"
+  }
+}

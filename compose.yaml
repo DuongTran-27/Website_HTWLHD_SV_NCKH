@@ -1,0 +1,18 @@
+services:
+  database:
+    image: postgres:17.6
+    environment:
+      POSTGRES_USER: nckh
+      POSTGRES_PASSWORD: ${LOCAL_POSTGRES_PASSWORD:?Set LOCAL_POSTGRES_PASSWORD in .env}
+      POSTGRES_DB: nckh
+    ports:
+      - "127.0.0.1:55432:5432"
+    volumes:
+      - nckh-postgres:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U nckh -d nckh"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+volumes:
+  nckh-postgres:
