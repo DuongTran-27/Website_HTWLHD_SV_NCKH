@@ -186,7 +186,7 @@ export function createApp() {
       code = "FILE_TOO_LARGE";
       message = req.path.includes("/profile/avatar")
         ? "Ảnh tối đa 5 MB."
-        : "Tài liệu tối đa 20 MB.";
+        : "Tài liệu tối đa 10 MB.";
     } else if (error.name === "MulterError") {
       status = 422;
       code = "INVALID_UPLOAD";

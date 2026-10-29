@@ -29,7 +29,7 @@ import {
 import { read } from "./routes.js";
 import { topicAccess, access, currentStudent } from "./permissions.js";
 export const filesRouter = Router();
-export const FILE_MAX = 20000000,
+export const FILE_MAX = 10000000,
   IMAGE_MAX = 5000000;
 const officeKinds = {
   docx: {
@@ -198,7 +198,7 @@ export async function validateFile(buffer, originalName, purpose) {
       buffer.length <= (purpose === "private_image" ? IMAGE_MAX : FILE_MAX),
     413,
     "FILE_TOO_LARGE",
-    purpose === "private_image" ? "Ảnh tối đa 5 MB." : "Tài liệu tối đa 20 MB.",
+    purpose === "private_image" ? "Ảnh tối đa 5 MB." : "Tài liệu tối đa 10 MB.",
   );
   const extension = extname(originalName).slice(1).toLowerCase();
   let detected;

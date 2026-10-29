@@ -82,7 +82,7 @@ npm run verify:cloudinary -- --expiry
 npm run seed:cloud
 ```
 
-Probe upload/download PDF **20.000.000 byte**, so checksum, kiểm tra ảnh công khai, và thử chính link tải sau 5 phút. Không tự mua gói hoặc hạ giới hạn. Nếu tài khoản chặn PDF, vượt quota hoặc không hỗ trợ raw/authenticated như yêu cầu, probe ghi fail; cần kiểm tra cấu hình/gói với chủ tài khoản.
+Probe upload/download PDF **10.000.000 byte**, so checksum, kiểm tra ảnh công khai, và thử chính link tải sau 5 phút. Giới hạn tài liệu đã được chủ dự án quyết định hạ từ 20 MB xuống **10 MB** (28/10/2026) vì gói Cloudinary Free chỉ nhận raw tối đa 10.485.760 byte; hồ sơ yêu cầu gốc vẫn ghi 20 MB. Muốn trở lại 20 MB: nâng gói Cloudinary rồi đổi `FILE_MAX` trong `app/server/src/files.js` và giới hạn tương ứng ở `app/client/src/workspace.jsx`. Nếu tài khoản chặn PDF, vượt quota hoặc không hỗ trợ raw/authenticated như yêu cầu, probe ghi fail; cần kiểm tra cấu hình/gói với chủ tài khoản.
 
 Tài liệu PDF/DOCX/XLSX/PPTX đi qua Express, xác minh nội dung/cấu trúc, raw/authenticated. Ảnh nghiên cứu riêng tối đa 5.000.000 byte có thể làm tài liệu bổ trợ trong bản báo cáo có ít nhất một PDF/Office; tổng tối đa 5 tệp. Ảnh đại diện được decode, resize và lưu image/upload công khai. Upload thành công chỉ tạo file ready; finalize mới ghi giờ nộp, deadlineSnapshot và isLate.
 

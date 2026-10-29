@@ -64,6 +64,6 @@ Database riêng: `nckh_test` reset cho Vitest, `nckh_e2e` reset cho Playwright, 
 
 ## Các phần còn phụ thuộc
 
-`CLOUDINARY_CLOUD_NAME`, `CLOUDINARY_API_KEY`, `CLOUDINARY_API_SECRET` đang trống. Cần chạy `npm run verify:cloudinary -- --expiry`, `npm run seed:cloud`, backup/restore byte file và các test TC27/35 còn mở. Sau đó cấu hình database Supabase, Vercel/Render và chạy TC36. Không có quota/gói dịch vụ nào được tự mua; không hạ giới hạn 20 MB để tuyên bố đạt.
+Cập nhật 28/10/2026: credential Cloudinary đã có trong `.env` local, ping API đạt; upload bị từ chối 403 do API key thiếu quyền, nên `verify:cloudinary` vẫn fail. Gói Free giới hạn raw 10.485.760 byte, chủ dự án quyết định hạ giới hạn tài liệu xuống 10 MB (lệch NFR02 gốc 20 MB). Supabase: đã chạy 5 migration (34 bảng, `pg_trgm`, `btree_gist`), `/api/v1/ready` đạt khi trỏ tới Supabase; chưa có tài khoản admin. Còn mở: cấp quyền key rồi chạy `npm run verify:cloudinary -- --expiry`, `npm run seed:cloud`, backup/restore byte file, TC27/35, Vercel/Render và TC36. Không có quota/gói dịch vụ nào được tự mua.
 
 Không đánh dấu dự án hoàn tất nghiệm thu toàn bộ khi những mục này chưa được kiểm chứng. Mã adapter, probe, scheduler, template deploy và tài liệu đã được bàn giao để tiếp tục trên dịch vụ thật.
