@@ -2047,7 +2047,7 @@ export function AvatarUpload() {
       )}
       <div>
         <p>Ảnh đại diện hiển thị công khai.</p>
-        <small>JPEG, PNG hoặc WebP · tối đa 5 MB.</small>
+        <small>JPEG, PNG hoặc WebP · tối đa 4 MB.</small>
         <label className="button secondary">
           <Upload size={15} />
           {pending ? "Đang cập nhật…" : "Cập nhật ảnh"}
@@ -2060,8 +2060,8 @@ export function AvatarUpload() {
               const file = e.target.files?.[0];
               if (!file) return;
               setError(null);
-              if (file.size > 5000000) {
-                setError(new Error("Ảnh tối đa 5 MB."));
+              if (file.size > 4000000) {
+                setError(new Error("Ảnh tối đa 4 MB."));
                 return;
               }
               const form = new FormData();

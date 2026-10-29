@@ -1,6 +1,15 @@
 # Triển khai Vercel / Render / Supabase
 
-Chưa có tài khoản/credential dịch vụ trong phiên bàn giao. Các cấu hình dưới đây đã chuẩn bị; chưa có URL triển khai được xác minh và chưa mua gói nào.
+## Cách đang dùng (29/10/2026): frontend và backend cùng trên Vercel
+
+- `api/index.js` xuất app Express (`createApp()`); `vercel.json` rewrite `/api/:path*` về function này, build chạy `npm run db:generate` trước, đóng gói kèm `app/docs/openapi.json` và `app/server/similarity-thresholds.json`.
+- Vercel Functions giới hạn request body 4,5 MB nên tài liệu và ảnh tối đa 4 MB.
+- `DATABASE_URL` dùng Supabase transaction pooler cổng 6543 với `pgbouncer=true&connection_limit=1` (khóa nghiệp vụ là `pg_advisory_xact_lock`, chạy được qua transaction pooler); `MIGRATION_DATABASE_URL` dùng session pooler cổng 5432.
+- Biến môi trường trên Vercel (Production, Preview): `DATABASE_URL`, `MIGRATION_DATABASE_URL`, `JWT_SECRET`, `JWT_ISSUER`, `JWT_AUDIENCE`, `COOKIE_SECURE=true`, `APP_ORIGIN`, ba biến `CLOUDINARY_*`, `CRON_SECRET`.
+- Vercel Cron gọi `GET /api/v1/internal/jobs` lúc `0 2 * * *` UTC (09:00 Việt Nam) với `Authorization: Bearer $CRON_SECRET`.
+- Migration chạy từ máy: `node --env-file=.env --env-file=.env.supabase app/scripts/prisma.js migrate deploy`.
+
+Các mục Render bên dưới giữ lại làm phương án thay thế khi cần upload lớn hơn 4 MB.
 
 ## Giá trị cần cấu hình tập trung
 

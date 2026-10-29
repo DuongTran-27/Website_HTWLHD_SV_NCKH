@@ -81,8 +81,9 @@ export function createApp() {
     await db.$queryRaw`SELECT 1`;
     ok(res, req, { status: "ready" });
   });
-  app.post("/api/v1/internal/jobs", async (req, res) => {
-    const expected = process.env.SCHEDULER_SECRET,
+  // GET is how Vercel Cron calls, with Authorization: Bearer $CRON_SECRET.
+  const scheduledJobs = async (req, res) => {
+    const expected = process.env.SCHEDULER_SECRET ?? process.env.CRON_SECRET,
       actual = req.get("Authorization")?.replace(/^Bearer /, "");
     ensure(
       expected &&
@@ -94,7 +95,9 @@ export function createApp() {
       "Không có quyền chạy tác vụ.",
     );
     ok(res, req, await runJobs());
-  });
+  };
+  app.get("/api/v1/internal/jobs", scheduledJobs);
+  app.post("/api/v1/internal/jobs", scheduledJobs);
   app.use("/api/v1", originGuard);
   app.use("/api/v1/auth", authRouter);
   app.get("/api/v1/openapi.json", (_req, res) => {
@@ -185,8 +188,8 @@ export function createApp() {
       status = 413;
       code = "FILE_TOO_LARGE";
       message = req.path.includes("/profile/avatar")
-        ? "Ảnh tối đa 5 MB."
-        : "Tài liệu tối đa 10 MB.";
+        ? "Ảnh tối đa 4 MB."
+        : "Tài liệu tối đa 4 MB.";
     } else if (error.name === "MulterError") {
       status = 422;
       code = "INVALID_UPLOAD";

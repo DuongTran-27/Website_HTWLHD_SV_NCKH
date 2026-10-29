@@ -104,7 +104,7 @@ const schemas = {
       id: uuid,
       topicId: uuid,
       originalName: string,
-      sizeBytes: { type: "integer", minimum: 1, maximum: 10000000 },
+      sizeBytes: { type: "integer", minimum: 1, maximum: 4000000 },
       mimeType: string,
       status: { type: "string", enum: ["pending", "ready", "failed"] },
       purpose: {
@@ -1184,7 +1184,7 @@ manual("post", "/topics/{id}/attachments", {
   },
   data: ref("Attachment"),
   description:
-    "Upload một file qua Express; 10 MB tài liệu, 5 MB ảnh; raw/authenticated; không đồng nghĩa đã nộp.",
+    "Upload một file qua Express; 4 MB tài liệu, 4 MB ảnh; raw/authenticated; không đồng nghĩa đã nộp.",
 });
 paths["/topics/{id}/attachments"].post.responses[201].content = {
   "application/json": { schema: envelope(ref("Attachment")) },
@@ -1215,7 +1215,7 @@ manual("post", "/profile/avatar", {
   },
   data: ref("User"),
   description:
-    "Chủ tài khoản cập nhật ảnh công khai; JPEG/PNG/WebP tối đa 5 MB; decode và chuyển WebP 256px; image/upload trên Cloudinary.",
+    "Chủ tài khoản cập nhật ảnh công khai; JPEG/PNG/WebP tối đa 4 MB; decode và chuyển WebP 256px; image/upload trên Cloudinary.",
 });
 paths["/profile/avatar"].post.responses[200].content = {
   "application/json": { schema: envelope(ref("User")) },
