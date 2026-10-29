@@ -60,7 +60,8 @@ try {
       throw new Error("Uploaded byte count differs from 10 MB.");
     report.checks.upload10MB = "passed";
     const url = cloudStorage.download(file),
-      response = await fetch(url, { signal: AbortSignal.timeout(120000) });
+      // Cloudinary's private download endpoint measured ~88s for 10 MB; the link itself lives 300s.
+      response = await fetch(url, { signal: AbortSignal.timeout(280000) });
     if (!response.ok)
       throw new Error(
         "Private PDF download failed. Check raw authenticated download format and PDF account delivery settings.",

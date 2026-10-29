@@ -1,14 +1,12 @@
 {
-  "at": "2026-10-28T04:38:24.964Z",
-  "status": "failed",
+  "at": "2026-10-29T07:36:53.861Z",
+  "status": "passed",
   "missing": [],
   "checks": {
-    "upload10MB": "not_run",
-    "privatePdfDownload": "not_run",
-    "expiresAfter5Minutes": "not_run",
-    "publicImage": "not_run"
+    "upload10MB": "passed",
+    "privatePdfDownload": "passed",
+    "expiresAfter5Minutes": "passed",
+    "publicImage": "passed"
   },
-  "notes": [
-    "Cloudinary upload/download verification failed. Check quota, account configuration and connectivity."
-  ]
+  "notes": []
 }
