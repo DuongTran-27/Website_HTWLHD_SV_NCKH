@@ -278,7 +278,7 @@
           "sizeBytes": {
             "type": "integer",
             "minimum": 1,
-            "maximum": 10000000
+            "maximum": 4000000
           },
           "mimeType": {
             "type": "string"
@@ -18347,7 +18347,7 @@
       },
       "post": {
         "operationId": "post__topics__id__attachments",
-        "summary": "Upload một file qua Express; 10 MB tài liệu, 5 MB ảnh; raw/authenticated; không đồng nghĩa đã nộp.",
+        "summary": "Upload một file qua Express; 4 MB tài liệu, 4 MB ảnh; raw/authenticated; không đồng nghĩa đã nộp.",
         "tags": [
           "topics"
         ],
@@ -20782,7 +20782,7 @@
     "/profile/avatar": {
       "post": {
         "operationId": "post__profile_avatar",
-        "summary": "Chủ tài khoản cập nhật ảnh công khai; JPEG/PNG/WebP tối đa 5 MB; decode và chuyển WebP 256px; image/upload trên Cloudinary.",
+        "summary": "Chủ tài khoản cập nhật ảnh công khai; JPEG/PNG/WebP tối đa 4 MB; decode và chuyển WebP 256px; image/upload trên Cloudinary.",
         "tags": [
           "profile"
         ],

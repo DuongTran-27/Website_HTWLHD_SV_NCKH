@@ -10,3 +10,6 @@ test-results/
 playwright-report/
 backups/
 *.log
+
+.vercel
+.env*
