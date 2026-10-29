@@ -2,7 +2,20 @@
 
 Ứng dụng JavaScript/JSX gồm React/Vite/Router, Tailwind, React Hook Form/Zod, TanStack Query, Express, PostgreSQL/Prisma, Cloudinary, pg_trgm và TF-IDF/cosine. Bốn vai trò, phân quyền đối tượng tại backend. Bộ hồ sơ ngày 21/10/2026 được giữ nguyên ở thư mục gốc.
 
-**Trạng thái bàn giao:** các luồng local đã tích hợp và kiểm thử. Cloudinary thực, proxy/cookie HTTPS và triển khai Vercel/Render/Supabase còn chờ tài khoản. Không có kho file giả hoặc dashboard hard-code. Chi tiết bằng chứng: [báo cáo kiểm thử](app/docs/TEST_REPORT.md), [đối chiếu FR01–FR26](app/docs/REQUIREMENTS_MATRIX.md).
+**Trạng thái (29/10/2026):** đang chạy tại **https://website-htwlhd-sv-nckh.vercel.app** — frontend và backend Express trên Vercel, PostgreSQL trên Supabase, tài liệu trên Cloudinary (`verify:cloudinary --expiry` đạt). Local: lint, build, Vitest 51/51, Playwright 8/8, `npm audit` 0 lỗ hổng. Chưa chạy E2E trên production. Không có kho file giả hoặc dashboard hard-code. Chi tiết bằng chứng: [báo cáo kiểm thử](app/docs/TEST_REPORT.md), [đối chiếu FR01–FR26](app/docs/REQUIREMENTS_MATRIX.md).
+
+## Bản production
+
+- Mỗi lần merge vào `main`, Vercel tự build (`npm run db:generate && npm run build`) và deploy. `api/index.js` chạy app Express dưới dạng Vercel Function; `/api/*` được rewrite về đó.
+- Biến môi trường production quản lý ở Vercel → Settings → Environment Variables; danh sách trong [DEPLOYMENT.md](app/docs/DEPLOYMENT.md).
+- Đổi schema: chạy migration lên Supabase từ máy, với `.env.supabase` chứa `DATABASE_URL`/`MIGRATION_DATABASE_URL` của Supabase:
+
+```powershell
+node --env-file=.env --env-file=.env.supabase app/scripts/prisma.js migrate deploy
+```
+
+- Admin đầu tiên: đặt `BOOTSTRAP_ADMIN_EMAIL`, `BOOTSTRAP_ADMIN_NAME`, `BOOTSTRAP_ADMIN_PASSWORD` (≥16 ký tự) trong phiên PowerShell rồi chạy `node --env-file=.env --env-file=.env.supabase app/scripts/create-admin.js`. Không chạy seed demo trên production.
+- Tác vụ hằng ngày (nhắc hạn, dọn file) do Vercel Cron gọi `GET /api/v1/internal/jobs` lúc 09:00 giờ Việt Nam.
 
 ## Chạy ngay trên máy hiện tại
 
@@ -29,7 +42,7 @@ Tài khoản hư cấu local:
 
 Mật khẩu demo là giá trị **DEMO_PASSWORD trong `.env`**, được tạo ngẫu nhiên khi thiết lập. Không đưa `.env` lên Git hoặc gửi secret vào chat. Tài khoản được tạo/import/reset qua UI phải đổi mật khẩu khi đăng nhập lần đầu. Seed demo bị chặn khi `NODE_ENV=production`.
 
-Hiện không có credential Cloudinary: upload báo lỗi “Kho tài liệu chưa được cấu hình”. Hồ sơ, nhóm, xét duyệt, đối chiếu, nhật ký, thống kê và thông báo vẫn làm việc với PostgreSQL thật. Ví dụ báo cáo/đánh giá có file thật được bổ sung bằng `npm run seed:cloud` sau khi cấu hình dịch vụ; seed local không tạo asset giả.
+Khi `.env` có đủ ba biến `CLOUDINARY_*`, upload local đi lên tài khoản Cloudinary thật; thiếu một biến thì upload báo lỗi “Kho tài liệu chưa được cấu hình”, các chức năng còn lại vẫn làm việc với PostgreSQL. Ví dụ báo cáo/đánh giá có file thật được bổ sung bằng `npm run seed:cloud`; seed local không tạo asset giả.
 
 ## Cài mới
 
@@ -84,7 +97,7 @@ npm run seed:cloud
 
 Probe upload/download PDF đúng `FILE_MAX` byte, so checksum, kiểm tra ảnh công khai, và thử chính link tải sau 5 phút. Giới hạn tài liệu và ảnh hiện là **4 MB** (4.000.000 byte): chủ dự án hạ từ 20 MB xuống 10 MB (28/10/2026, gói Cloudinary Free nhận raw tối đa 10.485.760 byte), rồi xuống 4 MB (29/10/2026) khi chuyển backend sang Vercel Functions vì request body tối đa 4,5 MB. Hồ sơ yêu cầu gốc vẫn ghi 20 MB/5 MB. Muốn nâng lại: chuyển upload sang trình duyệt → Cloudinary trực tiếp (hoặc chạy Express trên host không giới hạn body như Render) và nâng gói Cloudinary, rồi đổi `FILE_MAX`/`IMAGE_MAX` trong `app/server/src/files.js` và giới hạn ở `app/client/src/workspace.jsx`, `app/client/src/pages.jsx`. Nếu tài khoản chặn PDF, vượt quota hoặc không hỗ trợ raw/authenticated như yêu cầu, probe ghi fail; cần kiểm tra cấu hình/gói với chủ tài khoản.
 
-Tài liệu PDF/DOCX/XLSX/PPTX đi qua Express, xác minh nội dung/cấu trúc, raw/authenticated. Ảnh nghiên cứu riêng tối đa 5.000.000 byte có thể làm tài liệu bổ trợ trong bản báo cáo có ít nhất một PDF/Office; tổng tối đa 5 tệp. Ảnh đại diện được decode, resize và lưu image/upload công khai. Upload thành công chỉ tạo file ready; finalize mới ghi giờ nộp, deadlineSnapshot và isLate.
+Tài liệu PDF/DOCX/XLSX/PPTX đi qua Express, xác minh nội dung/cấu trúc, raw/authenticated. Ảnh nghiên cứu riêng tối đa 4.000.000 byte có thể làm tài liệu bổ trợ trong bản báo cáo có ít nhất một PDF/Office; tổng tối đa 5 tệp. Ảnh đại diện được decode, resize và lưu image/upload công khai. Upload thành công chỉ tạo file ready; finalize mới ghi giờ nộp, deadlineSnapshot và isLate.
 
 ## Cấu trúc
 
@@ -111,4 +124,4 @@ Prisma dùng scalar FK; các FK thường/composite, chỉ mục có điều ki�
 - [Kết quả đo hiệu năng](app/docs/PERFORMANCE_REPORT.md).
 - [Bảng chuyển trạng thái](app/docs/STATE_TRANSITIONS.md).
 
-Windows Task Scheduler `ResearchHubNCKH-Daily` đã được tạo trên máy này: 09:00 mỗi ngày, chạy nhắc hạn/dọn file/backup và giữ 7 backup do ứng dụng tạo. Xem bằng chứng và giới hạn trong OPERATIONS.md. Có thể gỡ bằng `powershell -File app/scripts/install-scheduler.ps1 -Remove`. PostgreSQL dừng bằng `npm run db:stop`; tác vụ ngày sau sẽ khởi động lại database local nếu cần.
+Riêng máy local, Windows Task Scheduler `ResearchHubNCKH-Daily` đã được tạo trên máy này (production dùng Vercel Cron): 09:00 mỗi ngày, chạy nhắc hạn/dọn file/backup và giữ 7 backup do ứng dụng tạo. Xem bằng chứng và giới hạn trong OPERATIONS.md. Có thể gỡ bằng `powershell -File app/scripts/install-scheduler.ps1 -Remove`. PostgreSQL dừng bằng `npm run db:stop`; tác vụ ngày sau sẽ khởi động lại database local nếu cần.
